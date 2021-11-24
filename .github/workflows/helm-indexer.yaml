@@ -1,10 +1,8 @@
 name: Helm Chart Indexer
 
 on:
-  push:
-    branches: [ main ]
   schedule:
-    - cron:  '1 * * * *' # Schedules a re-index every hour
+    - cron:  '0 0 * * *' # Schedules a re-index every hour
 
 jobs:
 
