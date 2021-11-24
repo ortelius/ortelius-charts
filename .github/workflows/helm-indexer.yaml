@@ -1,0 +1,36 @@
+name: Helm Chart Indexer
+
+on:
+  schedule:
+    - cron:  '0 0 * * *' # Schedules a re-index every hour
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: production
+    steps:
+    - name: Checkout Git
+      uses: actions/checkout@v2
+
+    - name: Install Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Configure Git
+      run: |
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+    - name: Create index.yaml on gh-pages
+      run: |
+        git fetch
+        yarn install
+        node main.js
+        cat index.yaml
+        git checkout gh-pages
+        git add index.yaml
+        git commit -m "🤖 update index.yaml"
+        git push
