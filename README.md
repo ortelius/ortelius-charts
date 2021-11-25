@@ -1,4 +1,5 @@
 # ortelius-charts
+![Helm Indexer](https://github.com/ortelius/ortelius-charts/actions/workflows/helm-indexer.yaml/badge.svg)
 
 This code takes in an array of GitHub Repos that runs the `chart-releaser` GitHub action from Helm.
 
