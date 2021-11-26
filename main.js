@@ -43,7 +43,7 @@ let chartEntries = {}
 getChartEntries().then(() => {
     const yamlOutput = createYamlOutput()
 
-    fs.writeFileSync("./index.yaml", yamlOutput, "utf8", (err) => {
+    fs.writeFileSync("./index-temp.yaml", yamlOutput, "utf8", (err) => {
         console.log(err)
     })
 })

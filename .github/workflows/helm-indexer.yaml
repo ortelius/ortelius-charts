@@ -29,8 +29,10 @@ jobs:
         git fetch
         yarn install
         node main.js
-        cat index.yaml
+        cat index-temp.yaml
         git checkout gh-pages
+        rm index.yaml
+        mv index-temp.yaml index.yaml
         git add index.yaml
         git commit -m "🤖 update index.yaml"
         git push
