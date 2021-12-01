@@ -2,7 +2,7 @@ name: Helm Chart Indexer
 
 on:
   schedule:
-    - cron:  '0 0 * * *' # Schedules a re-index every hour
+    - cron:  '0 */12 * * *' # Schedules a re-index every 12 hours
 
 jobs:
 
@@ -29,8 +29,10 @@ jobs:
         git fetch
         yarn install
         node main.js
-        cat index.yaml
+        cat index-temp.yaml
         git checkout gh-pages
+        rm index.yaml
+        mv index-temp.yaml index.yaml
         git add index.yaml
         git commit -m "🤖 update index.yaml"
         git push
