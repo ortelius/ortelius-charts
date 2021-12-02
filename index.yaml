@@ -45,54 +45,70 @@ entries:
       https://github.com/ortelius/ortelius/releases/download/ortelius-console-0.1.0/ortelius-console-0.1.0.tgz
     version: 0.1.0
   ms-dep-pkg-cud:
-  - apiVersion: v2
-    appVersion: '1.0'
-    created: '2021-11-11T04:42:20.78917414Z'
+  - apiVersion: v1
+    created: '2021-12-01T18:41:35.47922756Z'
     description: Dependency Packages
-    digest: fe35b1321338cf9924c03b90185e3906003cfec1c76a322c659566534bd4d963
+    digest: 58162b4c4a21eb02934ddd1350c3f55b31007892324fca09bd8bbf8de3fefe58
     name: ms-dep-pkg-cud
     type: application
     urls:
     - >-
-      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-0.1.0/ms-dep-pkg-cud-0.1.0.tgz
-    version: 0.1.0
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.47/ms-dep-pkg-cud-10.0.0-build.47.tgz
+    version: 10.0.0-build.47
   ms-dep-pkg-r:
-  - apiVersion: v2
-    appVersion: '1.0'
-    created: '2021-11-11T04:45:46.176689504Z'
+  - apiVersion: v1
+    created: '2021-12-01T18:36:25.376701527Z'
     description: Dependency Packages
-    digest: fc385f7500b43852b228c67ccebb3f993b4d4657f924fba9e181e9163e8cbeb0
+    digest: 97817d3b32416e409c8122e2a185178776d353d41f9a918e00604ed1abdf46b1
     name: ms-dep-pkg-r
     type: application
     urls:
     - >-
-      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-0.1.0/ms-dep-pkg-r-0.1.0.tgz
-    version: 0.1.0
+      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-10.0.0-build.33/ms-dep-pkg-r-10.0.0-build.33.tgz
+    version: 10.0.0-build.33
   ms-textfile-crud:
-  - apiVersion: v2
-    appVersion: '1.0'
-    created: '2021-11-11T04:44:01.702080148Z'
+  - apiVersion: v1
+    created: '2021-12-01T23:59:11.689950222Z'
     description: Dependency Packages
-    digest: 4f56298c33b266f8db6f4590fe1e214821efe6c5bed4c5474f5464e4940dc7b2
+    digest: a3488ee2ba1fc9d1a83f4d5b77991aed34fea5098b4691eba80c6edfc8d5d2a7
     name: ms-textfile-crud
     type: application
     urls:
     - >-
-      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-0.1.0/ms-textfile-crud-0.1.0.tgz
-    version: 0.1.0
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.36/ms-textfile-crud-10.0.0-build.36.tgz
+    version: 10.0.0-build.36
   ms-compitem-crud:
-  - apiVersion: v2
-    appVersion: '1.0'
-    created: '2021-11-11T04:47:07.340484342Z'
+  - apiVersion: v1
+    created: '2021-12-01T19:13:57.175811003Z'
     description: Dependency Packages
-    digest: cff2e165250c53596bf1d5199857ad87a5fcd5b9d174f4c214e4251ce471b1b1
+    digest: d010d95540b7041dca314e331d1fe945ba827c8e54955f6ee57688a64158c5ba
     name: ms-compitem-crud
     type: application
     urls:
     - >-
-      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-0.1.0/ms-compitem-crud-0.1.0.tgz
-    version: 0.1.0
+      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.34/ms-compitem-crud-10.0.0-build.34.tgz
+    version: 10.0.0-build.34
   ms-validate-user:
+  - apiVersion: v1
+    created: '2021-12-01T23:41:30.935126051Z'
+    description: Dependency Packages
+    digest: 2d79aeb5abacd6e731c2a18efcaecbfaddf1e0b1ca24bbb959b827a073f6ddbf
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.28/ms-validate-user-10.0.0-build.28.tgz
+    version: 10.0.0-build.28
+  - apiVersion: v1
+    created: '2021-12-01T22:50:58.138069068Z'
+    description: Dependency Packages
+    digest: cd70144706376471ee3769356fcebebcdc8800a7bce54300e71a647984dfc908
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.27/ms-validate-user-10.0.0-build.27.tgz
+    version: 10.0.0-build.27
   - apiVersion: v2
     appVersion: '1.0'
     created: '2021-11-11T04:58:25.195988896Z'
@@ -104,4 +120,4 @@ entries:
     - >-
       https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-0.1.0/ms-validate-user-0.1.0.tgz
     version: 0.1.0
-generated: '2021-12-01T12:09:47.015Z'
+generated: '2021-12-02T00:22:07.169Z'
