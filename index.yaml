@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   ms-general:
   - apiVersion: v1
+    created: '2021-12-02T19:43:36.150628932Z'
+    description: A Helm chart for Kubernetes
+    digest: a4f3e3e7ba229a33d55107880140cb1e32668ce6cd34f6296b6fbd9609a07844
+    name: ms-general
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-general-10.0.0-build.490/ms-general-10.0.0-build.490.tgz
+    version: 10.0.0-build.490
+  - apiVersion: v1
     appVersion: '1.0'
     created: '2021-10-21T18:04:22.626533945Z'
     description: A Helm chart for Kubernetes
@@ -68,15 +77,15 @@ entries:
     version: 10.0.0-build.33
   ms-textfile-crud:
   - apiVersion: v1
-    created: '2021-12-01T23:59:11.689950222Z'
+    created: '2021-12-02T17:31:53.743892648Z'
     description: Dependency Packages
-    digest: a3488ee2ba1fc9d1a83f4d5b77991aed34fea5098b4691eba80c6edfc8d5d2a7
+    digest: 4d610962caf32fe2b9c955d10edd61fc924a3c09542fd2064e3e6927784347ed
     name: ms-textfile-crud
     type: application
     urls:
     - >-
-      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.36/ms-textfile-crud-10.0.0-build.36.tgz
-    version: 10.0.0-build.36
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.39/ms-textfile-crud-10.0.0-build.39.tgz
+    version: 10.0.0-build.39
   ms-compitem-crud:
   - apiVersion: v1
     created: '2021-12-01T19:13:57.175811003Z'
@@ -120,4 +129,4 @@ entries:
     - >-
       https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-0.1.0/ms-validate-user-0.1.0.tgz
     version: 0.1.0
-generated: '2021-12-02T12:09:23.271Z'
+generated: '2021-12-03T00:22:00.796Z'
