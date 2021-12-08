@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   ms-general:
   - apiVersion: v1
+    created: '2021-12-07T17:29:55.652679896Z'
+    description: A Helm chart for Kubernetes
+    digest: be07546176d77a8ceb5d2e082e30de6a8b4e647174f63ec5901188fe6f228733
+    name: ms-general
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-general-10.0.0-build.505/ms-general-10.0.0-build.505.tgz
+    version: 10.0.0-build.505
+  - apiVersion: v1
     created: '2021-12-02T19:43:36.150628932Z'
     description: A Helm chart for Kubernetes
     digest: a4f3e3e7ba229a33d55107880140cb1e32668ce6cd34f6296b6fbd9609a07844
@@ -32,6 +41,15 @@ entries:
       https://github.com/ortelius/ortelius/releases/download/ms-nginx-0.1.0/ms-nginx-0.1.0.tgz
     version: 0.1.0
   ms-ui:
+  - apiVersion: v1
+    created: '2021-12-07T17:28:59.999691461Z'
+    description: A Helm chart for Kubernetes
+    digest: a81e41dd61428b5a5630dd958323853b108b9ba413e79715de9167624ba5a58c
+    name: ms-ui
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-ui-10.0.0-build.505/ms-ui-10.0.0-build.505.tgz
+    version: 10.0.0-build.505
   - apiVersion: v1
     appVersion: '1.0'
     created: '2021-10-21T18:04:22.977260421Z'
@@ -129,4 +147,4 @@ entries:
     - >-
       https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-0.1.0/ms-validate-user-0.1.0.tgz
     version: 0.1.0
-generated: '2021-12-07T12:10:20.618Z'
+generated: '2021-12-08T00:23:15.606Z'
