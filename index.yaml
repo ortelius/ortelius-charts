@@ -133,15 +133,15 @@ entries:
     version: 10.0.0-build.39
   ms-compitem-crud:
   - apiVersion: v1
-    created: '2022-01-03T18:11:55.503649297Z'
+    created: '2022-01-04T18:17:55.390839542Z'
     description: Dependency Packages
-    digest: 2bad79fce8103de97ba4f3e8895cacf430d2ac6062d4456e6347457e229d6844
+    digest: 91c8846bec818be93a8bb62ebc390e245155089eaa59714cae45d2d2cff74146
     name: ms-compitem-crud
     type: application
     urls:
     - >-
-      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.36/ms-compitem-crud-10.0.0-build.36.tgz
-    version: 10.0.0-build.36
+      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.39/ms-compitem-crud-10.0.0-build.39.tgz
+    version: 10.0.0-build.39
   ms-validate-user:
   - apiVersion: v1
     created: '2021-12-28T18:08:49.171822465Z'
@@ -184,4 +184,4 @@ entries:
     - >-
       https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-0.1.0/ms-validate-user-0.1.0.tgz
     version: 0.1.0
-generated: '2022-01-04T12:09:53.008Z'
+generated: '2022-01-05T00:25:32.926Z'
