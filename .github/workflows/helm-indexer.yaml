@@ -1,8 +1,7 @@
 name: Helm Chart Indexer
 
 on:
-  schedule:
-    - cron:  '*/15 * * * *' # Schedules a re-index every 15 mins
+  workflow_dispatch:
 
 jobs:
 
