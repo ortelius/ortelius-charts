@@ -100,16 +100,16 @@ entries:
     version: 0.1.0
   ms-dep-pkg-cud:
   - apiVersion: v1
-    created: '2022-01-24T18:52:16.378358816Z'
+    created: '2022-01-26T14:47:27.632090812Z'
     description: Dependency Packages
-    digest: 85e3a3754e193b92a2091d7516044a1bc45789e08e7f898201ba21e66f319beb
+    digest: 776d1eb310b2e0b0ebfd6e76fe53c7e114f61929cabdf36043b092d357bed8bf
     icon: https://ortelius.github.io/ortelius-charts/logo.png
     name: ms-dep-pkg-cud
     type: application
     urls:
     - >-
-      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.53/ms-dep-pkg-cud-10.0.0-build.53.tgz
-    version: 10.0.0-build.53
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.56/ms-dep-pkg-cud-10.0.0-build.56.tgz
+    version: 10.0.0-build.56
   ms-dep-pkg-r:
   - apiVersion: v1
     created: '2022-01-25T07:16:58.331497508Z'
@@ -147,6 +147,17 @@ entries:
       https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.72/ms-compitem-crud-10.0.0-build.72.tgz
     version: 10.0.0-build.72
   ms-validate-user:
+  - apiVersion: v1
+    created: '2022-01-26T14:57:13.760286476Z'
+    description: Dependency Packages
+    digest: 9466788fe56624142fb772c1f10346f74b0773f25f284a546b60b7dbb33f5aa1
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.43/ms-validate-user-10.0.0-build.43.tgz
+    version: 10.0.0-build.43
   - apiVersion: v1
     created: '2022-01-26T12:17:33.900733443Z'
     description: Dependency Packages
@@ -218,4 +229,4 @@ entries:
     - >-
       https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-0.1.0/ms-validate-user-0.1.0.tgz
     version: 0.1.0
-generated: '2022-01-26T12:18:02.934Z'
+generated: '2022-01-26T14:57:42.373Z'
