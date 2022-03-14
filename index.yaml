@@ -109,6 +109,28 @@ entries:
     version: 0.1.0
   ms-dep-pkg-cud:
   - apiVersion: v1
+    created: '2022-03-14T20:16:04.601011199Z'
+    description: Dependency Packages
+    digest: 14f09ad1af97b73f2141ba4583d946be1af83902b07bde373ac16375cb015e4d
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.61/ms-dep-pkg-cud-10.0.0-build.61.tgz
+    version: 10.0.0-build.61
+  - apiVersion: v1
+    created: '2022-03-11T00:43:26.567748326Z'
+    description: Dependency Packages
+    digest: 5d88e6c97e7f20a22eb2e9aa2a0c179536a0067934b31377ad8b3eada1f2852f
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.60/ms-dep-pkg-cud-10.0.0-build.60.tgz
+    version: 10.0.0-build.60
+  - apiVersion: v1
     created: '2022-02-02T21:10:23.102220238Z'
     description: Dependency Packages
     digest: ce4880c90a4e664888fe1730579c705572741af7f6fc4a61f3e3d89652c670b7
@@ -120,6 +142,17 @@ entries:
       https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.59/ms-dep-pkg-cud-10.0.0-build.59.tgz
     version: 10.0.0-build.59
   ms-dep-pkg-r:
+  - apiVersion: v1
+    created: '2022-03-11T00:44:22.171068869Z'
+    description: Dependency Packages
+    digest: f966f2d9a94bc970a18a58ea5af34a668bb0284a0a526877c772162386883adb
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-r
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-10.0.0-build.42/ms-dep-pkg-r-10.0.0-build.42.tgz
+    version: 10.0.0-build.42
   - apiVersion: v1
     created: '2022-01-25T07:16:58.331497508Z'
     description: Dependency Packages
@@ -133,6 +166,28 @@ entries:
     version: 10.0.0-build.41
   ms-textfile-crud:
   - apiVersion: v1
+    created: '2022-03-14T20:09:37.145988579Z'
+    description: Dependency Packages
+    digest: 3a7e89207b25b84f77cd4163f171bf25e5f0ea5808144a5ec09ded67bffd787b
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.43/ms-textfile-crud-10.0.0-build.43.tgz
+    version: 10.0.0-build.43
+  - apiVersion: v1
+    created: '2022-03-11T00:42:32.64267933Z'
+    description: Dependency Packages
+    digest: 4969d976544ded30c9973f8ebe34bc1b10a5f93554f5b95b88f37410721c6f84
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.42/ms-textfile-crud-10.0.0-build.42.tgz
+    version: 10.0.0-build.42
+  - apiVersion: v1
     created: '2022-01-25T07:32:20.5343979Z'
     description: Dependency Packages
     digest: d8f35b857546b0982153388cd7668101e79af7edcd0d45b15a998d9fe599d994
@@ -144,6 +199,17 @@ entries:
       https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.41/ms-textfile-crud-10.0.0-build.41.tgz
     version: 10.0.0-build.41
   ms-compitem-crud:
+  - apiVersion: v1
+    created: '2022-03-14T20:24:11.630170779Z'
+    description: Dependency Packages
+    digest: 8bb9dfde8ea8da11a8f12a3b2236d548b7cc61c433f7cda0c8d0dccb28a691f2
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-compitem-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.73/ms-compitem-crud-10.0.0-build.73.tgz
+    version: 10.0.0-build.73
   - apiVersion: v1
     created: '2022-01-24T18:01:43.741278844Z'
     description: Dependency Packages
@@ -282,4 +348,4 @@ entries:
     - >-
       https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-0.1.0/ms-validate-user-0.1.0.tgz
     version: 0.1.0
-generated: '2022-03-10T15:49:57.384Z'
+generated: '2022-03-14T20:24:43.792Z'
