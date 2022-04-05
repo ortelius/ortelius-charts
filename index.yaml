@@ -1,0 +1,51 @@
+apiVersion: v1
+entries:
+  ortelius:
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2022-04-05T20:26:46.042704284Z"
+    dependencies:
+    - name: ms-nginx
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.10
+    - name: ms-general
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.25
+    - name: ms-ui
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.10
+    - name: ms-postgres
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.0
+    - name: ms-jwt
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.0
+    - name: ms-dep-pkg-cud
+      repository: https://ortelius.github.io/ortelius-ms-dep-pkg-cud/
+      version: 10.0.0-build.66
+    - name: ms-dep-pkg-r
+      repository: https://ortelius.github.io/ortelius-ms-dep-pkg-r/
+      version: 10.0.0-build.52
+    - name: ms-textfile-crud
+      repository: https://ortelius.github.io/ortelius-ms-textfile-crud/
+      version: 10.0.0-build.48
+    - name: ms-validate-user
+      repository: https://ortelius.github.io/ortelius-ms-validate-user/
+      version: 10.0.0-build.48
+    - name: ms-compitem-crud
+      repository: https://ortelius.github.io/ortelius-ms-compitem-crud/
+      version: 10.0.0-build.78
+    description: Ortelius
+    digest: fccbfb3ced0086e91d503ecce15affdef6a365d6bc6ba419d155b1cab486236f
+    home: https://www.ortelius.io
+    icon: https://ortelius.github.io/ortelius//DeployHub-Pro/deployhub.svg
+    keywords:
+    - Service Catalog
+    - Microservices
+    - SBOM
+    name: ortelius
+    type: application
+    urls:
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.0/ortelius-10.0.0.tgz
+    version: 10.0.0
+generated: "2022-04-05T20:26:46.042715183Z"
