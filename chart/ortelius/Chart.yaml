@@ -2,7 +2,7 @@ apiVersion: v2
 name: ortelius
 description: Ortelius
 home: https://www.ortelius.io
-icon: https://ortelius.github.io/ortelius//DeployHub-Pro/deployhub.svg
+icon: https://ortelius.github.io/ortelius-charts/logo.png
 keywords: 
   - Service Catalog
   - Microservices
