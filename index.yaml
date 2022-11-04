@@ -1,0 +1,538 @@
+apiVersion: v1
+entries:
+  ms-general:
+  - apiVersion: v1
+    created: '2021-12-09T21:39:27.428277391Z'
+    description: A Helm chart for Kubernetes
+    digest: 44524c7d072977831b5299e78d9e4e9b6a1023259c5489c63d3f57f96fbe96f3
+    name: ms-general
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-general-10.0.0-build.510/ms-general-10.0.0-build.510.tgz
+    version: 10.0.0-build.510
+  - apiVersion: v1
+    created: '2021-12-07T17:29:55.652679896Z'
+    description: A Helm chart for Kubernetes
+    digest: be07546176d77a8ceb5d2e082e30de6a8b4e647174f63ec5901188fe6f228733
+    name: ms-general
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-general-10.0.0-build.505/ms-general-10.0.0-build.505.tgz
+    version: 10.0.0-build.505
+  - apiVersion: v1
+    created: '2021-12-02T19:43:36.150628932Z'
+    description: A Helm chart for Kubernetes
+    digest: a4f3e3e7ba229a33d55107880140cb1e32668ce6cd34f6296b6fbd9609a07844
+    name: ms-general
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-general-10.0.0-build.490/ms-general-10.0.0-build.490.tgz
+    version: 10.0.0-build.490
+  - apiVersion: v1
+    appVersion: '1.0'
+    created: '2021-10-21T18:04:22.626533945Z'
+    description: A Helm chart for Kubernetes
+    digest: b2ecec14c19f373203645e37dfdd5d6fc1669076606efb9b1cee054ec96d4c99
+    name: ms-general
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-general-0.1.0/ms-general-0.1.0.tgz
+    version: 0.1.0
+  ms-nginx:
+  - apiVersion: v1
+    created: '2021-12-09T21:39:27.600552861Z'
+    description: A Helm chart for Kubernetes
+    digest: c907b9539c1f6e9d8472f685d3bc6ef231bdad898e19adf79256198c26b18203
+    name: ms-nginx
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-nginx-10.0.0-build.510/ms-nginx-10.0.0-build.510.tgz
+    version: 10.0.0-build.510
+  - apiVersion: v1
+    appVersion: '1.0'
+    created: '2021-10-21T18:04:22.788580159Z'
+    description: A Helm chart for Kubernetes
+    digest: 93578902a1c99cde6933d01a315475e9a6d62f5444004da6494226bc1cbc1f8d
+    name: ms-nginx
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-nginx-0.1.0/ms-nginx-0.1.0.tgz
+    version: 0.1.0
+  ms-ui:
+  - apiVersion: v1
+    created: '2021-12-09T21:39:27.752195691Z'
+    description: A Helm chart for Kubernetes
+    digest: 63f314c2e050c5182a6d53b1d9f7ad14d71d42d4553fb1bab198760b74dd045e
+    name: ms-ui
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-ui-10.0.0-build.510/ms-ui-10.0.0-build.510.tgz
+    version: 10.0.0-build.510
+  - apiVersion: v1
+    created: '2021-12-07T17:28:59.999691461Z'
+    description: A Helm chart for Kubernetes
+    digest: a81e41dd61428b5a5630dd958323853b108b9ba413e79715de9167624ba5a58c
+    name: ms-ui
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-ui-10.0.0-build.505/ms-ui-10.0.0-build.505.tgz
+    version: 10.0.0-build.505
+  - apiVersion: v1
+    created: '2022-02-02T21:11:48.298804886Z'
+    description: A Helm chart for Kubernetes
+    digest: 8e3aad6d5d0028e10f19b6a02941bc63969046b59938d1bf7854bf6daa41f6df
+    name: ms-ui
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-ui-10.0.0-build.493/ms-ui-10.0.0-build.493.tgz
+    version: 10.0.0-build.493
+  - apiVersion: v1
+    appVersion: '1.0'
+    created: '2021-10-21T18:04:22.977260421Z'
+    description: A Helm chart for Kubernetes
+    digest: 7877e2ad547ea50edafacc1e8619860e991cde5705b65c7638920d4c57ec0d90
+    name: ms-ui
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ms-ui-0.1.0/ms-ui-0.1.0.tgz
+    version: 0.1.0
+  ortelius-console:
+  - apiVersion: v1
+    appVersion: '1.0'
+    created: '2021-10-21T18:04:23.148978161Z'
+    description: A Helm chart for Kubernetes
+    digest: e8a2a3dc51f2bbe106ffe6b1f66dad35441635321db5c81e7c68a210f7d29766
+    name: ortelius-console
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius/releases/download/ortelius-console-0.1.0/ortelius-console-0.1.0.tgz
+    version: 0.1.0
+  ms-dep-pkg-cud:
+  - apiVersion: v1
+    created: '2022-03-22T16:57:39.462309227Z'
+    description: Dependency Packages
+    digest: 554ddbae6d5a24de75d1b51a5e4b542acd6541c3c6e7b7dc95781b1c0774581e
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.66/ms-dep-pkg-cud-10.0.0-build.66.tgz
+    version: 10.0.0-build.66
+  - apiVersion: v1
+    created: '2022-03-18T16:42:52.455639712Z'
+    description: Dependency Packages
+    digest: 274198421b8a1cd537051546d067af688a0f0d23c7f9b57325c928983eefd8c3
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.65/ms-dep-pkg-cud-10.0.0-build.65.tgz
+    version: 10.0.0-build.65
+  - apiVersion: v1
+    created: '2022-03-17T22:22:34.906133712Z'
+    description: Dependency Packages
+    digest: c06db41dc9f3258c22b454e1c15daa4fd95f1bf5b18a659661ac0560488a6e9b
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.64/ms-dep-pkg-cud-10.0.0-build.64.tgz
+    version: 10.0.0-build.64
+  - apiVersion: v1
+    created: '2022-03-16T17:52:38.845137701Z'
+    description: Dependency Packages
+    digest: 2b09d0a821a428e2b840aa8dedf4e23468e5d58cbff46534619e908b5b734c86
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.63/ms-dep-pkg-cud-10.0.0-build.63.tgz
+    version: 10.0.0-build.63
+  - apiVersion: v1
+    created: '2022-03-15T17:49:22.82208898Z'
+    description: Dependency Packages
+    digest: db1928fef827e4f78301ebbf9d7731831dd7add5b63623067731a2afa564a669
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.62/ms-dep-pkg-cud-10.0.0-build.62.tgz
+    version: 10.0.0-build.62
+  - apiVersion: v1
+    created: '2022-03-14T20:16:04.601011199Z'
+    description: Dependency Packages
+    digest: 14f09ad1af97b73f2141ba4583d946be1af83902b07bde373ac16375cb015e4d
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.61/ms-dep-pkg-cud-10.0.0-build.61.tgz
+    version: 10.0.0-build.61
+  - apiVersion: v1
+    created: '2022-03-11T00:43:26.567748326Z'
+    description: Dependency Packages
+    digest: 5d88e6c97e7f20a22eb2e9aa2a0c179536a0067934b31377ad8b3eada1f2852f
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.60/ms-dep-pkg-cud-10.0.0-build.60.tgz
+    version: 10.0.0-build.60
+  - apiVersion: v1
+    created: '2022-02-02T21:10:23.102220238Z'
+    description: Dependency Packages
+    digest: ce4880c90a4e664888fe1730579c705572741af7f6fc4a61f3e3d89652c670b7
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-cud/releases/download/ms-dep-pkg-cud-10.0.0-build.59/ms-dep-pkg-cud-10.0.0-build.59.tgz
+    version: 10.0.0-build.59
+  ms-dep-pkg-r:
+  - apiVersion: v1
+    created: '2022-03-30T02:58:53.682388019Z'
+    description: Dependency Packages
+    digest: 71303ba8686828343d1a193f907d293b9aba7f0d3cf4452a264497070d744c7d
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-r
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-10.0.0-build.53/ms-dep-pkg-r-10.0.0-build.53.tgz
+    version: 10.0.0-build.53
+  - apiVersion: v1
+    created: '2022-03-18T16:42:35.416663633Z'
+    description: Dependency Packages
+    digest: 92de9c41259bbce07a2c0afcdd63ed4682acc87dc03ee91d626097acfe4e96e5
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-r
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-10.0.0-build.52/ms-dep-pkg-r-10.0.0-build.52.tgz
+    version: 10.0.0-build.52
+  - apiVersion: v1
+    created: '2022-03-17T22:21:29.923570525Z'
+    description: Dependency Packages
+    digest: 48d9c577de58f089dc1b77d4c8668bfe40195c060220fa8b97f5e115bfb1b784
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-r
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-10.0.0-build.48/ms-dep-pkg-r-10.0.0-build.48.tgz
+    version: 10.0.0-build.48
+  - apiVersion: v1
+    created: '2022-03-15T16:30:41.047254556Z'
+    description: Dependency Packages
+    digest: bfb30726eff3540990a19869421215b0d494dbf11ba85495132fef3cb159f012
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-r
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-10.0.0-build.44/ms-dep-pkg-r-10.0.0-build.44.tgz
+    version: 10.0.0-build.44
+  - apiVersion: v1
+    created: '2022-03-11T00:44:22.171068869Z'
+    description: Dependency Packages
+    digest: f966f2d9a94bc970a18a58ea5af34a668bb0284a0a526877c772162386883adb
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-r
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-10.0.0-build.42/ms-dep-pkg-r-10.0.0-build.42.tgz
+    version: 10.0.0-build.42
+  - apiVersion: v1
+    created: '2022-01-25T07:16:58.331497508Z'
+    description: Dependency Packages
+    digest: 80073ed9b5e5282e7c233ceeef59859c95b60dc8b675bfa9c13d7a5879a0ad83
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-r
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-dep-pkg-r/releases/download/ms-dep-pkg-r-10.0.0-build.41/ms-dep-pkg-r-10.0.0-build.41.tgz
+    version: 10.0.0-build.41
+  ms-textfile-crud:
+  - apiVersion: v1
+    created: '2022-03-30T02:59:03.008114224Z'
+    description: Dependency Packages
+    digest: a21ea62a5bf461b9ab64309ce8abade037143ad7b1de5dd76089fb923c614920
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.48/ms-textfile-crud-10.0.0-build.48.tgz
+    version: 10.0.0-build.48
+  - apiVersion: v1
+    created: '2022-03-17T22:42:04.318385894Z'
+    description: Dependency Packages
+    digest: 9845f34827fbcf6d143250a8802fa452ae3f4326e7b1bf6619666894de424518
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.47/ms-textfile-crud-10.0.0-build.47.tgz
+    version: 10.0.0-build.47
+  - apiVersion: v1
+    created: '2022-03-17T22:55:21.273147689Z'
+    description: Dependency Packages
+    digest: 408071ec9c5fef878ec3720ac632a8063ca3f01745e81347381acf0920c8d708
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.45/ms-textfile-crud-10.0.0-build.45.tgz
+    version: 10.0.0-build.45
+  - apiVersion: v1
+    created: '2022-03-15T16:32:54.561699525Z'
+    description: Dependency Packages
+    digest: dcde0c40bdee854b527476fd19f40c046aba11aaa61a3a5f568ef19680598ca7
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.44/ms-textfile-crud-10.0.0-build.44.tgz
+    version: 10.0.0-build.44
+  - apiVersion: v1
+    created: '2022-03-14T20:09:37.145988579Z'
+    description: Dependency Packages
+    digest: 3a7e89207b25b84f77cd4163f171bf25e5f0ea5808144a5ec09ded67bffd787b
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.43/ms-textfile-crud-10.0.0-build.43.tgz
+    version: 10.0.0-build.43
+  - apiVersion: v1
+    created: '2022-03-11T00:42:32.64267933Z'
+    description: Dependency Packages
+    digest: 4969d976544ded30c9973f8ebe34bc1b10a5f93554f5b95b88f37410721c6f84
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.42/ms-textfile-crud-10.0.0-build.42.tgz
+    version: 10.0.0-build.42
+  - apiVersion: v1
+    created: '2022-01-25T07:32:20.5343979Z'
+    description: Dependency Packages
+    digest: d8f35b857546b0982153388cd7668101e79af7edcd0d45b15a998d9fe599d994
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-textfile-crud/releases/download/ms-textfile-crud-10.0.0-build.41/ms-textfile-crud-10.0.0-build.41.tgz
+    version: 10.0.0-build.41
+  ms-compitem-crud:
+  - apiVersion: v1
+    created: '2022-03-17T22:21:40.626656297Z'
+    description: Dependency Packages
+    digest: 787147e4ea520537ce5685aa901cfd5b5f81a0740e3227114f304eee7e4d5125
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-compitem-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.78/ms-compitem-crud-10.0.0-build.78.tgz
+    version: 10.0.0-build.78
+  - apiVersion: v1
+    created: '2022-03-15T15:25:27.48666617Z'
+    description: Dependency Packages
+    digest: 1351571144a7a0139e72a0e1e33e65534828ab1b2ccb6bc6377a63bd79489a74
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-compitem-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.76/ms-compitem-crud-10.0.0-build.76.tgz
+    version: 10.0.0-build.76
+  - apiVersion: v1
+    created: '2022-03-14T21:34:15.992281355Z'
+    description: Dependency Packages
+    digest: bf8e06b9ab2c1a7fb0f97b9630c12d0586168dc23bed548380f1792b33446561
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-compitem-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.74/ms-compitem-crud-10.0.0-build.74.tgz
+    version: 10.0.0-build.74
+  - apiVersion: v1
+    created: '2022-03-14T20:24:11.630170779Z'
+    description: Dependency Packages
+    digest: 8bb9dfde8ea8da11a8f12a3b2236d548b7cc61c433f7cda0c8d0dccb28a691f2
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-compitem-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.73/ms-compitem-crud-10.0.0-build.73.tgz
+    version: 10.0.0-build.73
+  - apiVersion: v1
+    created: '2022-01-24T18:01:43.741278844Z'
+    description: Dependency Packages
+    digest: 0b4039866e20b9177196b37ae614ee852348b611a143fc0d74145650e8ec606d
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-compitem-crud
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-compitem-crud/releases/download/ms-compitem-crud-10.0.0-build.72/ms-compitem-crud-10.0.0-build.72.tgz
+    version: 10.0.0-build.72
+  ms-validate-user:
+  - apiVersion: v1
+    created: '2022-03-17T22:41:16.342379282Z'
+    description: Dependency Packages
+    digest: 25266ae4e8368ac75dd51772a9b77cd3a2f3fbfaeeb9440b7b0fa6b7e19fc3af
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.48/ms-validate-user-10.0.0-build.48.tgz
+    version: 10.0.0-build.48
+  - apiVersion: v1
+    created: '2022-03-10T15:49:21.738274386Z'
+    description: Dependency Packages
+    digest: 48064c0fdf4c2be15a0a645359fb8f8921c698e3ac2549bf89913b8f26c0ed86
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.47/ms-validate-user-10.0.0-build.47.tgz
+    version: 10.0.0-build.47
+  - apiVersion: v1
+    created: '2022-03-10T15:25:50.930703868Z'
+    description: Dependency Packages
+    digest: 81e064da74285ddde57a0e6417ac5ed760ccd4997774798c9d12304e7f77f453
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.46/ms-validate-user-10.0.0-build.46.tgz
+    version: 10.0.0-build.46
+  - apiVersion: v1
+    created: '2022-03-10T02:39:55.149267289Z'
+    description: Dependency Packages
+    digest: 2d3121661bf37b94ea597f2a40b34ef1d51c14655eefe68db76c4c37c7eafa79
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.45/ms-validate-user-10.0.0-build.45.tgz
+    version: 10.0.0-build.45
+  - apiVersion: v1
+    created: '2022-03-09T00:23:59.827033211Z'
+    description: Dependency Packages
+    digest: 2c5aaaed5e755bbd4a3d1cce4cd5fbda051b81456ab865a6682db34a2bd13c81
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.44/ms-validate-user-10.0.0-build.44.tgz
+    version: 10.0.0-build.44
+  - apiVersion: v1
+    created: '2022-01-26T14:57:13.760286476Z'
+    description: Dependency Packages
+    digest: 9466788fe56624142fb772c1f10346f74b0773f25f284a546b60b7dbb33f5aa1
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.43/ms-validate-user-10.0.0-build.43.tgz
+    version: 10.0.0-build.43
+  - apiVersion: v1
+    created: '2022-01-26T12:17:33.900733443Z'
+    description: Dependency Packages
+    digest: 93d0cb4f0e6915d897319020757fb44d2679bd01970a2002809af3daddb32ac5
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.39/ms-validate-user-10.0.0-build.39.tgz
+    version: 10.0.0-build.39
+  - apiVersion: v1
+    created: '2022-01-24T18:01:48.434262184Z'
+    description: Dependency Packages
+    digest: b1be84d4853d658ce80f33dece9e3b07c12eaf793bfc2ac6dbaecdf0b9951707
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.35/ms-validate-user-10.0.0-build.35.tgz
+    version: 10.0.0-build.35
+  - apiVersion: v1
+    created: '2022-01-21T05:20:16.673093765Z'
+    description: Dependency Packages
+    digest: 275e555137b7a1c3abd74568f70ccd5aee0aa19bc031ee75cc50b2f1e81d5cab
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.30/ms-validate-user-10.0.0-build.30.tgz
+    version: 10.0.0-build.30
+  - apiVersion: v1
+    created: '2021-12-28T18:08:49.171822465Z'
+    description: Dependency Packages
+    digest: 8182afdda8457d0053c8bf526c67e4334dea2efdfb29f524fd74f980e9aaf9b2
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.29/ms-validate-user-10.0.0-build.29.tgz
+    version: 10.0.0-build.29
+  - apiVersion: v1
+    created: '2021-12-01T23:41:30.935126051Z'
+    description: Dependency Packages
+    digest: 2d79aeb5abacd6e731c2a18efcaecbfaddf1e0b1ca24bbb959b827a073f6ddbf
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.28/ms-validate-user-10.0.0-build.28.tgz
+    version: 10.0.0-build.28
+  - apiVersion: v1
+    created: '2021-12-01T22:50:58.138069068Z'
+    description: Dependency Packages
+    digest: cd70144706376471ee3769356fcebebcdc8800a7bce54300e71a647984dfc908
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-10.0.0-build.27/ms-validate-user-10.0.0-build.27.tgz
+    version: 10.0.0-build.27
+  - apiVersion: v2
+    appVersion: '1.0'
+    created: '2021-11-11T04:58:25.195988896Z'
+    description: Dependency Packages
+    digest: fdbd20f31bf9b83dd3b6f4422058e66391e207339c2faa604ec12034fdc91a0a
+    name: ms-validate-user
+    type: application
+    urls:
+    - >-
+      https://github.com/ortelius/ortelius-ms-validate-user/releases/download/ms-validate-user-0.1.0/ms-validate-user-0.1.0.tgz
+    version: 0.1.0
+generated: '2022-03-30T02:59:27.734Z'
