@@ -38,7 +38,7 @@ jobs:
           version: v3.10.0
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@latest
+        uses: helm/chart-releaser-action@v1.4.1
         with:
           charts_dir: chart/ortelius
         env:
