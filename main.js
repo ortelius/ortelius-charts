@@ -71,7 +71,6 @@ function createYamlOutput() {
         type: 'application',
         version: chartVersion,
         appVersion: '10.0.0',
-        generated: new Date().toISOString(),
         dependencies: chartEntries,
     }, {noArrayIndent: true})
 
