@@ -85,7 +85,7 @@ let chartVersion = ''
 getChartEntries().then(() => {
     const yamlOutput = createYamlOutput()
     console.log(yamlOutput);
-    fs.writeFileSync("./index-temp.yaml", yamlOutput, "utf8", (err) => {
+    fs.writeFileSync("./chart/ortelius/Chart.yaml", yamlOutput, "utf8", (err) => {
         console.log(err)
     })
 })
