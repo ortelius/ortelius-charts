@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ortelius
-cdescription: Ortelius
+description: Ortelius
 home: https://www.ortelius.io
 icon: https://ortelius.github.io/ortelius-charts/logo.png
 keywords:
@@ -10,7 +10,6 @@ keywords:
 type: application
 version: 0.1.1
 appVersion: 10.0.0
-generated: '2022-11-10T18:21:27.131Z'
 dependencies:
 - name: ms-general
   version: 10.0.72
