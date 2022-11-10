@@ -3,41 +3,45 @@ name: ortelius
 description: Ortelius
 home: https://www.ortelius.io
 icon: https://ortelius.github.io/ortelius-charts/logo.png
-keywords: 
-  - Service Catalog
-  - Microservices
-  - SBOM
+keywords:
+- Service Catalog
+- Microservices
+- SBOM
 type: application
-version: 10.0.0
+version: 0.1.1
 appVersion: 10.0.0
+generated: '2022-11-10T18:24:36.547Z'
 dependencies:
-- name: ms-nginx
-  version: 10.0.10
-  repository: https://ortelius.github.io/ortelius/
 - name: ms-general
-  version: 10.0.25
-  repository: https://ortelius.github.io/ortelius/ 
-- name: ms-ui
-  version: 10.0.10
-  repository: https://ortelius.github.io/ortelius/ 
-- name: ms-postgres
-  version: 10.0.0
-  repository: https://ortelius.github.io/ortelius/ 
+  version: 10.0.72
+  repository: https://ortelius.github.io/ms-general/
 - name: ms-jwt
   version: 10.0.0
-  repository: https://ortelius.github.io/ortelius/ 
+  repository: https://ortelius.github.io/ms-jwt/
+- name: ms-nginx
+  version: 10.0.18
+  repository: https://ortelius.github.io/ms-nginx/
+- name: ms-postgres
+  version: 10.0.0
+  repository: https://ortelius.github.io/ms-postgres/
+- name: ms-ui
+  version: 10.0.17
+  repository: https://ortelius.github.io/ms-ui/
 - name: ms-dep-pkg-cud
-  version: 10.0.0-build.66
-  repository: https://ortelius.github.io/ortelius-ms-dep-pkg-cud/
+  version: 10.0.1
+  repository: https://ortelius.github.io/ms-dep-pkg-cud/
 - name: ms-dep-pkg-r
-  version: 10.0.0-build.52
-  repository: https://ortelius.github.io/ortelius-ms-dep-pkg-r/ 
+  version: 10.0.1
+  repository: https://ortelius.github.io/ms-dep-pkg-r/
 - name: ms-textfile-crud
-  version: 10.0.0-build.48
-  repository: https://ortelius.github.io/ortelius-ms-textfile-crud/ 
-- name: ms-validate-user
-  version: 10.0.0-build.48
-  repository: https://ortelius.github.io/ortelius-ms-validate-user/
+  version: 10.0.1
+  repository: https://ortelius.github.io/ms-textfile-crud/
 - name: ms-compitem-crud
-  version: 10.0.0-build.78
-  repository: https://ortelius.github.io/ortelius-ms-compitem-crud/  
+  version: 10.0.1
+  repository: https://ortelius.github.io/ms-compitem-crud/
+- name: ms-validate-user
+  version: 10.0.1
+  repository: https://ortelius.github.io/ms-validate-user/
+- name: ms-scorecard
+  version: 10.0.38
+  repository: https://ortelius.github.io/ms-scorecard/
