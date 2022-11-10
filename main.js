@@ -14,7 +14,7 @@ const chartRepos = [
 
 // Helper functions
 async function getChartEntries() {
-    await axios.get('https://raw.githubusercontent.com/ortelius/ortelius/main/chart/Chart.yaml').then(response => {
+    await axios.get('https://raw.githubusercontent.com/ortelius/ortelius-charts/main/chart/ortelius/Chart.yaml').then(response => {
         let parsedYaml = yaml.load(response.data)
         chartVersion = parsedYaml['version'];
         parts = chartVersion.split('.');
