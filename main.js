@@ -4,7 +4,6 @@ const fs = require('fs');
 const { exit } = require("process");
 
 const chartRepos = [
-    "ortelius/ortelius",
     "ortelius/ms-dep-pkg-cud",
     "ortelius/ms-dep-pkg-r",
     "ortelius/ms-textfile-crud",
