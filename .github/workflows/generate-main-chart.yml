@@ -36,13 +36,7 @@ jobs:
         with:
           commit_message: Update main chart
 
-      - name: Pull subcharts
-        run: |
-          helm dependency update chart/ortelius
-
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.1
-        with:
-          charts_dir: chart/ortelius
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
