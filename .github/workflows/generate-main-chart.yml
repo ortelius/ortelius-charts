@@ -32,7 +32,7 @@ jobs:
           sleep 180
           npm install
           node main.js
-          git pull
+          git pull -X ours
       
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
