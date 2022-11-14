@@ -1,40 +1,30 @@
-apiVersion: v2
-name: ortelius
-description: Ortelius
-home: https://www.ortelius.io
-icon: https://ortelius.github.io/ortelius-charts/logo.png
-keywords:
-- Service Catalog
-- Microservices
-- SBOM
-type: application
-version: 10.0.8
-appVersion: 10.0.0
 dependencies:
 - name: ms-dep-pkg-cud
-  version: 10.0.1
   repository: https://ortelius.github.io/ms-dep-pkg-cud/
+  version: 10.0.1
 - name: ms-dep-pkg-r
-  version: 10.0.1
   repository: https://ortelius.github.io/ms-dep-pkg-r/
+  version: 10.0.1
 - name: ms-textfile-crud
-  version: 10.0.1
   repository: https://ortelius.github.io/ms-textfile-crud/
+  version: 10.0.1
 - name: ms-compitem-crud
-  version: 10.0.1
   repository: https://ortelius.github.io/ms-compitem-crud/
-- name: ms-validate-user
   version: 10.0.1
+- name: ms-validate-user
   repository: https://ortelius.github.io/ms-validate-user/
+  version: 10.0.1
 - name: ms-scorecard
-  version: 10.0.38
   repository: https://ortelius.github.io/ms-scorecard/
+  version: 10.0.38
 - name: ms-general
-  version: 10.0.94
   repository: https://ortelius.github.io/ortelius/
+  version: 10.0.94
 - name: ms-nginx
-  version: 10.0.94
   repository: https://ortelius.github.io/ortelius/
+  version: 10.0.94
 - name: ms-ui
-  version: 10.0.94
   repository: https://ortelius.github.io/ortelius/
+  version: 10.0.94
+digest: sha256:9611fe95f7f26a5e93c10760e9c3a4aa086f9eca73f3adff8a0b0430b7217155
+generated: "2022-11-14T09:58:43.004035-07:00"

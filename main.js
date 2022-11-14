@@ -48,6 +48,10 @@ async function getChartEntries() {
                 dep = {};
                 dep['name'] = latest['name'];
                 dep['version'] = latest['version'];
+
+                if (key == "ms-ui" || key == "ms-nginx" || key == "ms-general")
+                    key = "ortelius";
+
                 dep['repository'] = 'https://ortelius.github.io/' + key + '/'
                 latest_chart.push(dep);
 
