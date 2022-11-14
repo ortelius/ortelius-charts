@@ -1,6 +1,7 @@
 name: Generate Main Charts
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -28,6 +29,7 @@ jobs:
 
       - name: Generate Main Chart
         run: |
+          sleep 180
           npm install
           node main.js
           git pull
