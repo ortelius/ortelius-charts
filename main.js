@@ -10,6 +10,7 @@ const chartRepos = [
     "ortelius/ms-compitem-crud",
     "ortelius/ms-validate-user",
     "ortelius/ms-scorecard",
+    "ortelius/ortelius",
 ]
 
 // Helper functions
