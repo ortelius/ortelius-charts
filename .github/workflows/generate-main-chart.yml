@@ -21,20 +21,21 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.10.0
+
       - name: Generate Main Chart
         run: |
           npm install
           node main.js
+          helm dependency update chart/ortelius
       
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update main chart
-
-      - name: Install Helm
-        uses: azure/setup-helm@v1
-        with:
-          version: v3.10.0
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.1
