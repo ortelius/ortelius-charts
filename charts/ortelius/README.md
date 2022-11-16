@@ -7,10 +7,10 @@ Microservice Configuration Management - Track, Version, Find, Share and Deploy M
 ## TL;DR
 
 ```console
-$ openssl genpkey -out jwt.pri -algorithm RSA -pkeyopt rsa_keygen_bits:2048
-$ openssl pkey -in jwt.pri -pubout -out jwt.pub
-$ helm repo add ortelius https://ortelius.github.io/ortelius-charts/
-$ helm install my-release ortelius/ortelius --set ms-postgres.DBPassword=my_db_password --set ms-ms-nginx.SSLType=OFF --set ms-postgres.DBHost=orteliusdb.us-east-1.rds.amazonaws.com --set-file ms-jwt.JwtPrivateKey=jwt.pri --set-file ms-jwt.JwtPublicKey=jwt.pub
+openssl genpkey -out jwt.pri -algorithm RSA -pkeyopt rsa_keygen_bits:2048
+openssl pkey -in jwt.pri -pubout -out jwt.pub
+helm repo add ortelius https://ortelius.github.io/ortelius-charts/
+helm install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-nginx.ingress.type=ssloff --set ms-general.dbhost=orteliusdb.us-east-1.rds.amazonaws.com --set-file ms-general.jwt.privatekey=jwt.pri --set-file ms-general.jwt.publickey=jwt.pub
 ```
 
 ## Introduction
@@ -29,15 +29,15 @@ This chart deploys all of the required secrets, services, and deployments on a [
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install my-release ortelius/ortelius --set ms-postgres.DBPassword=my_db_password --set ms-postgres.DBHost=orteliusdb.us-east-1.rds.amazonaws.com --set ms-ms-nginx.SSLType=OFF --set-file ms-jwt.JwtPrivateKey=jwt.pri --set-file ms-jwt.JwtPublicKey=jwt.pub
+helm install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-general.dbhost=orteliusdb.us-east-1.rds.amazonaws.com --set ms-nginx.ingress.type=ssloff --set-file ms-general.jwt.privatekey=jwt.pri --set-file ms-general.jwt.publickey=jwt.pub
 ```
 
-The command deploys Ortelius on the Kubernetes cluster using the following parameters:
-- ms-postgres.DBPassword = Postgres Database Password
-- ms-postgres.DBHost = Postgres Database Hostname
-- ms-ms-nginx.SSLType = OFF (Disable the use of SSL certificates)
-- ms-jwt.JwtPrivateKey = Private RSA PKCS#8 Key for creating the JWT Token
-- ms-jwt.JwtPublicKey = Public RSA PKCS#8 Key for creating the JWT Token
+The command deploys DeployHub on the Kubernetes cluster using the following parameters:
+- ms-general.dbpass = Postgres Database Password
+- ms-general.dbhost = Postgres Database Hostname
+- ms-nginx.ingress.type = ssloff (Disable the use of SSL certificates)
+- ms-general.jwt.privatekey = Private RSA PKCS#8 Key for creating the JWT Token
+- ms-general.jwt.publickey = Public RSA PKCS#8 Key for creating the JWT Token
 
 > **Tip**: List all releases using `helm list`
 
@@ -46,7 +46,7 @@ The command deploys Ortelius on the Kubernetes cluster using the following param
 To uninstall/delete the `my-release` deployment:
 
 ```console
-$ helm delete my-release
+helm delete my-release
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
@@ -57,16 +57,20 @@ The command removes all the Kubernetes components associated with the chart and 
 
 | Name                     | Description                                                                                  | Value           |
 | ------------------------ | -------------------------------------------------------------------------------------------- | --------------- |
-| `ms-postgres.DBUserName` | Postgres Database User Name                                                                  | `postgres`      |
-| `ms-postgres.DBPassword` | Postgres Database Password                                                                   | `postgres`      |
-| `ms-postgres.DBName      | Postgres Database Name                                                                   | `postgres`      |
-| `ms-postgres.DBHost`     | Postgres Database Host Name                                                                  | `localhost`     |
-| `ms-postgres.DBPort`     | Postgres Database Port                                                                       | `5432`          |
-| `ms-nginx.SSLType`    | Enable SSL                                                                                   | `ON or OFF`     |
-| `ms-nginx.SSLChainedCert`    | SSL Chained Certificate - used when ms-nginx.SSLType=ON                            | `SSL Chained Certificate - decoded` |
-| `ms-nginx.SSLPrivateKey`    | SSL Private Key for SSL Chained Cert - used when ms-nginx.SSLType=ON                | `SSL Private Key - decoded` |
-| `jwt.JwtPrivateKey`    | Private RSA PKCS#8 Key used to create JWT Tokens                                            | `Private RSA PKCS#8 Key - decoded` |
-| `jwt.JwtPublicKey`    | Public RSA PKCS#8 Key used to create JWT Tokens                                            | `Public RSA PKCS#8 Key - decoded` |
+| `ms-general.dbuser`     | Postgres Database User Name                                                                  | `postgres`      |
+| `ms-general.dbpass`     | Postgres Database Password                                                                   | `postgres`      |
+| `ms-general.dbname`     | Postgres Database Name                                                                       | `postgres`      |
+| `ms-general.dbhost`     | Postgres Database Host Name                                                                  | `localhost`     |
+| `ms-general.dbport`     | Postgres Database Port                                                                       | `5432`          |
+| `ms-nginx.ingress.type` | ssloff = non ssl enabled, alb = add alb ingress, volumemnt = certs come from existing ssl volume, sslcert = add certs a opaque secret | `sslcert, alb, volumemnt, ssloff`  |
+| `ms-nginx.ingress.sslcert.chainedcert`    | SSL Chained Certificate - required when `dh-ms-nginx.ingress.type=sslcert`                     | `SSL Chained Certificate - decoded` |
+| `ms-nginx.ingress.sslcert.privatekey`    | SSL Private Key for SSL Chained Cert - required when `dh-ms-nginx.ingress.type=sslcert`         | `SSL Private Key - decoded`         |
+| `ms-nginx.ingress.alb_subnets`    | String of comma delimited subnets for the ALB - required when  `dh-ms-nginx.ingress.type=alb`  |   |
+| `ms-nginx.ingress.alb_certificate_arn`    | ARN for the certificate from AWS Certificate Manager - required when  `dh-ms-nginx.ingress.type=alb` |  |
+| `ms-nginx.ingress.dnsname`    | DNS Name that matches the certificate from AWS Certificate Manager - required when  `ms-nginx.ingress.type=alb` |  |
+| `ms-nginx.ingress.scheme`    | ALB scheme - required when  `dh-ms-nginx.ingress.type=alb` |  `internal` or `internet-facing` default: `internal`|
+| `ms-general.jwt.privatekey` | Private RSA PKCS#8 Key used to create JWT Tokens                                            | `Private RSA PKCS#8 Key - decoded` |
+| `ms-general.jwt.publickey`  | Public RSA PKCS#8 Key used to create JWT Tokens                                             | `Public RSA PKCS#8 Key - decoded`  |
 
 > NOTE: Once this chart is deployed, it is not possible to change the application's access credentials, such as usernames or passwords, using Helm. To change these application credentials after deployment, delete any persistent volumes (PVs) used by the chart and re-deploy it, or use the application's built-in administrative tools if available.
 
