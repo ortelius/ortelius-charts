@@ -67,6 +67,21 @@ Alternatively, a YAML file that specifies the values for the above parameters ca
 ```console
 helm install my-release -f values.yaml ortelius/ortelius
 ```
+## Accessing the Ortelius UI After the Chart Install
+- Use a port forward with kubectl to the ms-nginx microservice service
+- `kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT`
+- kubectl port-forward help
+```
+kubectl port-forward -h
+```
+- 8080 represents the local port on your machine http://localhost:8080
+```
+kubectl port-forward svc/ms-nginx 8080:80 -n ortelius
+```
+- 8443 represents the local port on your machine http://localhost:8443
+```
+kubectl port-forward svc/ms-nginx 8443:443 -n ortelius
+```
 ## Uninstalling the Chart
 
 To uninstall/delete the `my-release` deployment:
