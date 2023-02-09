@@ -12,7 +12,7 @@ version: 10.0.62
 appVersion: 10.0.0
 dependencies:
 - name: ms-dep-pkg-cud
-  version: 10.0.4
+  version: 10.0.5
   repository: https://ortelius.github.io/ms-dep-pkg-cud/
 - name: ms-dep-pkg-r
   version: 10.0.11
@@ -21,10 +21,10 @@ dependencies:
   version: 10.0.12
   repository: https://ortelius.github.io/ms-textfile-crud/
 - name: ms-compitem-crud
-  version: 10.0.6
+  version: 10.0.7
   repository: https://ortelius.github.io/ms-compitem-crud/
 - name: ms-validate-user
-  version: 10.0.15
+  version: 10.0.16
   repository: https://ortelius.github.io/ms-validate-user/
 - name: ms-scorecard
   version: 10.0.54
