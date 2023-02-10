@@ -39,6 +39,10 @@ jobs:
         with:
           commit_message: Update main chart
 
+      - name: Re-pull
+        run: |
+          git pull
+      
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.1
         env:
