@@ -27,7 +27,7 @@ dependencies:
   version: 10.0.17
   repository: https://ortelius.github.io/ms-validate-user/
 - name: ms-scorecard
-  version: 10.0.55
+  version: 10.0.57
   repository: https://ortelius.github.io/ms-scorecard/
 - name: ms-general
   version: 10.0.30
