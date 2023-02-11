@@ -15,7 +15,15 @@ const chartRepos = [
 
 // Helper functions
 async function getChartEntries() {
-    await axios.get('https://raw.githubusercontent.com/ortelius/ortelius-charts/main/charts/ortelius/Chart.yaml').then(response => {
+    let sha = '';
+
+    await axios.get('https://api.github.com/repos/ortelius/ortelius-charts/commits/main').then(response => {
+        sha = response.data.sha;
+    });
+
+    url = 'https://raw.githubusercontent.com/ortelius/ortelius-charts/' + sha + '/charts/ortelius/Chart.yaml';
+
+    await axios.get(url).then(response => {
         let parsedYaml = yaml.load(response.data)
         chartVersion = parsedYaml['version'];
         parts = chartVersion.split('.');
@@ -27,7 +35,11 @@ async function getChartEntries() {
     latest_chart = [];
 
     for (let i = 0; i < chartRepos.length; i++) {
-        const repoUrl = `https://github.com/${chartRepos[i]}/raw/gh-pages/index.yaml`;
+        await axios.get('https://api.github.com/repos/' + chartRepos[i] + '/commits/gh-pages').then(response => {
+            sha = response.data.sha;
+        });
+
+        const repoUrl = 'https://raw.githubusercontent.com/' + chartRepos[i] + '/' + sha + '/index.yaml';
         
         await axios.get(repoUrl).then(response => {
             let parsedYaml = yaml.load(response.data)
