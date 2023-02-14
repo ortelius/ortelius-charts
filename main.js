@@ -104,3 +104,4 @@ getChartEntries().then(() => {
         console.log(err)
     })
 })
+
