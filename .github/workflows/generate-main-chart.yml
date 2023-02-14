@@ -25,8 +25,8 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -42,6 +42,11 @@ jobs:
         with:
           commit_message: Update main chart
       
+      - name: Sleep
+        run: |
+          sleep 5m
+          shell: bash
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         env:
