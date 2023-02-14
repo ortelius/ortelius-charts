@@ -43,9 +43,7 @@ jobs:
           commit_message: Update main chart
       
       - name: Sleep
-        run: |
-          sleep 5m
-          shell: bash
+        run: sleep 5m
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
