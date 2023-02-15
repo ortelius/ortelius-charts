@@ -1,6 +1,6 @@
 # Ortelius
 
-![Version: 10.0.53](https://img.shields.io/badge/Version-10.0.53-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v10.0.0](https://img.shields.io/badge/AppVersion-v10.0.0-informational?style=flat-square)
+![Version: 10.0.77](https://img.shields.io/badge/Version-10.0.77-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v10.0.0](https://img.shields.io/badge/AppVersion-v10.0.0-informational?style=flat-square)
 
 Ortelius is a central evidence store of all your security and DevOps intelligence. It provides comprehensive, end-to-end insights across all of your clusters and logical applications from a single dashboard. Centrally view microservice and application level SBOMs, CVEs, deployed inventory, application to microservice dependencies, impact analysis, application versions, and the use of open-source packages across the entire organization. 
 
@@ -10,6 +10,12 @@ Ortelius is a central evidence store of all your security and DevOps intelligenc
 ## Additional Information
 
 This chart deploys all of the required secrets, services, and deployments on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+
+### Changes in 10.0.54 - 10.0.77
+Updated all base images to remove vulnerabilities. Used cgr.dev/chainguard/python, cgr.dev/chainguard/jdk:latest, and python:3.10-alpine, eclipse-temurin:8-jdk-alpine base images. The cgr.dev ones work great if you do not have additional packages (openssl) to install otherwise alpine is needed.
+
+cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base image so they should not be used.
+
 
 ### Changes in 10.0.53
 
