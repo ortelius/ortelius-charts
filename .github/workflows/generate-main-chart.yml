@@ -42,7 +42,7 @@ jobs:
         with:
           commit_message: Update main chart
       
-      - name: Sleep
+      - name: Sleep 5 mins
         run: sleep 5m
 
       - name: Run chart-releaser
