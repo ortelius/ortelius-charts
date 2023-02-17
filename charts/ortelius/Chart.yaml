@@ -8,7 +8,7 @@ keywords:
 - Microservices
 - SBOM
 type: application
-version: 10.0.94
+version: 10.0.95
 appVersion: 10.0.0
 dependencies:
 - name: ms-dep-pkg-cud
@@ -38,3 +38,7 @@ dependencies:
 - name: ms-ui
   version: 10.0.45
   repository: https://ortelius.github.io/ortelius/
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 12.x.x
+  condition: postgresql.enabled
