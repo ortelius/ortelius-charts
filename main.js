@@ -72,13 +72,6 @@ async function getChartEntries() {
             });
         })
     }
-    dep = {};
-    dep['name'] = 'postgresql';
-    dep['repository'] = 'https://charts.bitnami.com/bitnami';
-    dep['version'] = '12.x.x';
-    dep['condition'] = 'postgresql.enabled';
-    latest_chart.push(dep);
-
     chartEntries = latest_chart;
     return latest_chart;
 }
