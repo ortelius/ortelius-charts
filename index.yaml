@@ -3,6 +3,50 @@ entries:
   ortelius:
   - apiVersion: v2
     appVersion: 10.0.0
+    created: "2023-02-17T21:18:11.385723245Z"
+    dependencies:
+    - name: ms-dep-pkg-cud
+      repository: https://ortelius.github.io/ms-dep-pkg-cud/
+      version: 10.0.8
+    - name: ms-dep-pkg-r
+      repository: https://ortelius.github.io/ms-dep-pkg-r/
+      version: 10.0.16
+    - name: ms-textfile-crud
+      repository: https://ortelius.github.io/ms-textfile-crud/
+      version: 10.0.16
+    - name: ms-compitem-crud
+      repository: https://ortelius.github.io/ms-compitem-crud/
+      version: 10.0.10
+    - name: ms-validate-user
+      repository: https://ortelius.github.io/ms-validate-user/
+      version: 10.0.20
+    - name: ms-scorecard
+      repository: https://ortelius.github.io/ms-scorecard/
+      version: 10.0.64
+    - name: ms-general
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.45
+    - name: ms-nginx
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.45
+    - name: ms-ui
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.45
+    description: Ortelius
+    digest: 8c3e2c776a0bae1e006424b2460c33ddda545017d6c5516bb1af424de583d9fb
+    home: https://www.ortelius.io
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    keywords:
+    - Service Catalog
+    - Microservices
+    - SBOM
+    name: ortelius
+    type: application
+    urls:
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.96/ortelius-10.0.96.tgz
+    version: 10.0.96
+  - apiVersion: v2
+    appVersion: 10.0.0
     created: "2023-02-17T16:45:20.732266983Z"
     dependencies:
     - name: ms-dep-pkg-cud
@@ -3463,4 +3507,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.6/ortelius-10.0.6.tgz
     version: 10.0.6
-generated: "2023-02-17T16:45:20.732785985Z"
+generated: "2023-02-17T21:18:11.386227846Z"
