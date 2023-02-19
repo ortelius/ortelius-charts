@@ -8,7 +8,7 @@ keywords:
 - Microservices
 - SBOM
 type: application
-version: 10.0.101
+version: 10.0.102
 appVersion: 10.0.0
 dependencies:
 - name: ms-dep-pkg-cud
@@ -31,7 +31,7 @@ dependencies:
   repository: https://ortelius.github.io/ms-scorecard/
 - name: ms-postgres
   version: 10.0.3
-  condition: postgresql.enabled
+  condition: global.psostgresql.enabled
   repository: https://ortelius.github.io/ms-postgres/
 - name: ms-general
   version: 10.0.46
