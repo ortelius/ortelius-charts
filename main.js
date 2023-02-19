@@ -66,7 +66,7 @@ async function getChartEntries() {
                     key = "ortelius";
 
                 if (key == "ms-postgres")
-                  dep['condition'] = 'postgresql.enabled'
+                  dep['condition'] = 'global.psostgresql.enabled'
 
                 dep['repository'] = 'https://ortelius.github.io/' + key + '/'
                 latest_chart.push(dep);
