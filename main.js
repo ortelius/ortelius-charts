@@ -10,6 +10,7 @@ const chartRepos = [
     "ortelius/ms-compitem-crud",
     "ortelius/ms-validate-user",
     "ortelius/ms-scorecard",
+    "ortelius/ms-postgres",
     "ortelius/ortelius",
 ]
 
@@ -63,6 +64,9 @@ async function getChartEntries() {
 
                 if (key == "ms-ui" || key == "ms-nginx" || key == "ms-general")
                     key = "ortelius";
+
+                if (key == "ms-postgres")
+                  dep['condition'] = 'postgresql.enabled'
 
                 dep['repository'] = 'https://ortelius.github.io/' + key + '/'
                 latest_chart.push(dep);
