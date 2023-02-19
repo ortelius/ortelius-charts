@@ -1,2 +1,3 @@
-postgresql:
-  enabled: false
+global:
+  postgresql:
+    enabled: false
