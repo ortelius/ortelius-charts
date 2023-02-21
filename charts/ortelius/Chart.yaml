@@ -8,7 +8,7 @@ keywords:
 - Microservices
 - SBOM
 type: application
-version: 10.0.121
+version: 10.0.122
 appVersion: 10.0.0
 dependencies:
 - name: ms-dep-pkg-cud
