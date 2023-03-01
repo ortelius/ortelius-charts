@@ -36,7 +36,6 @@ jobs:
 
       - name: Generate Main Chart
         run: |
-          npm ci
           node main.js
       
       - name: Commit changes
