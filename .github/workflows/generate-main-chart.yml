@@ -36,6 +36,7 @@ jobs:
 
       - name: Generate Main Chart
         run: |
+          yarn install
           node main.js
       
       - name: Commit changes
