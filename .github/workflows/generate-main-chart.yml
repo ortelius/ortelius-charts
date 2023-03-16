@@ -1,5 +1,7 @@
 name: Generate Main Charts
 
+#force build
+
 on:
   workflow_dispatch:
   push:
