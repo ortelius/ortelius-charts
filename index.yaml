@@ -3,6 +3,54 @@ entries:
   ortelius:
   - apiVersion: v2
     appVersion: 10.0.0
+    created: "2023-03-23T18:19:43.71621197Z"
+    dependencies:
+    - name: ms-dep-pkg-cud
+      repository: https://ortelius.github.io/ms-dep-pkg-cud/
+      version: 10.0.42
+    - name: ms-dep-pkg-r
+      repository: https://ortelius.github.io/ms-dep-pkg-r/
+      version: 10.0.112
+    - name: ms-textfile-crud
+      repository: https://ortelius.github.io/ms-textfile-crud/
+      version: 10.0.31
+    - name: ms-compitem-crud
+      repository: https://ortelius.github.io/ms-compitem-crud/
+      version: 10.0.24
+    - name: ms-validate-user
+      repository: https://ortelius.github.io/ms-validate-user/
+      version: 10.0.34
+    - name: ms-scorecard
+      repository: https://ortelius.github.io/ms-scorecard/
+      version: 10.0.84
+    - condition: global.postgresql.enabled
+      name: ms-postgres
+      repository: https://ortelius.github.io/ms-postgres/
+      version: 10.0.14
+    - name: ms-general
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.85
+    - name: ms-nginx
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.85
+    - name: ms-ui
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.85
+    description: Ortelius
+    digest: dbc2888e95799c79473da064c0033449b50edb5a67a0e0bf78c8ee7d82cbf0fe
+    home: https://www.ortelius.io
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    keywords:
+    - Service Catalog
+    - Microservices
+    - SBOM
+    name: ortelius
+    type: application
+    urls:
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.235/ortelius-10.0.235.tgz
+    version: 10.0.235
+  - apiVersion: v2
+    appVersion: 10.0.0
     created: "2023-03-22T23:42:29.996429365Z"
     dependencies:
     - name: ms-dep-pkg-cud
@@ -9843,4 +9891,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.6/ortelius-10.0.6.tgz
     version: 10.0.6
-generated: "2023-03-22T23:42:29.997250778Z"
+generated: "2023-03-23T18:19:43.71703127Z"
