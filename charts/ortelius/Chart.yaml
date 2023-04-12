@@ -8,14 +8,14 @@ keywords:
 - Microservices
 - SBOM
 type: application
-version: 10.0.278
+version: 10.0.279
 appVersion: 10.0.0
 dependencies:
 - name: ms-dep-pkg-cud
   version: 10.0.68
   repository: https://ortelius.github.io/ms-dep-pkg-cud/
 - name: ms-dep-pkg-r
-  version: 10.0.142
+  version: 10.0.144
   repository: https://ortelius.github.io/ms-dep-pkg-r/
 - name: ms-textfile-crud
   version: 10.0.47
