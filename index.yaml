@@ -3,6 +3,54 @@ entries:
   ortelius:
   - apiVersion: v2
     appVersion: 10.0.0
+    created: "2023-04-18T15:29:28.860044749Z"
+    dependencies:
+    - name: ms-dep-pkg-cud
+      repository: https://ortelius.github.io/ms-dep-pkg-cud/
+      version: 10.0.70
+    - name: ms-dep-pkg-r
+      repository: https://ortelius.github.io/ms-dep-pkg-r/
+      version: 10.0.144
+    - name: ms-textfile-crud
+      repository: https://ortelius.github.io/ms-textfile-crud/
+      version: 10.0.47
+    - name: ms-compitem-crud
+      repository: https://ortelius.github.io/ms-compitem-crud/
+      version: 10.0.35
+    - name: ms-validate-user
+      repository: https://ortelius.github.io/ms-validate-user/
+      version: 10.0.50
+    - name: ms-scorecard
+      repository: https://ortelius.github.io/ms-scorecard/
+      version: 10.0.110
+    - condition: global.postgresql.enabled
+      name: ms-postgres
+      repository: https://ortelius.github.io/ms-postgres/
+      version: 10.0.14
+    - name: ms-general
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.88
+    - name: ms-nginx
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.88
+    - name: ms-ui
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.88
+    description: Ortelius
+    digest: 59fcade0d26100b078c724f3344a415f54fb4b568027e41cd358244b1248376d
+    home: https://www.ortelius.io
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    keywords:
+    - Service Catalog
+    - Microservices
+    - SBOM
+    name: ortelius
+    type: application
+    urls:
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.288/ortelius-10.0.288.tgz
+    version: 10.0.288
+  - apiVersion: v2
+    appVersion: 10.0.0
     created: "2023-04-18T15:28:48.095481045Z"
     dependencies:
     - name: ms-dep-pkg-cud
@@ -12291,4 +12339,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.6/ortelius-10.0.6.tgz
     version: 10.0.6
-generated: "2023-04-18T15:28:48.09634026Z"
+generated: "2023-04-18T15:29:28.86119166Z"
