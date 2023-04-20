@@ -8,7 +8,7 @@ keywords:
 - Microservices
 - SBOM
 type: application
-version: 10.0.302
+version: 10.0.303
 appVersion: 10.0.0
 dependencies:
 - name: ms-dep-pkg-cud
@@ -34,11 +34,11 @@ dependencies:
   condition: global.postgresql.enabled
   repository: https://ortelius.github.io/ms-postgres/
 - name: ms-general
-  version: 10.0.97
+  version: 10.0.98
   repository: https://ortelius.github.io/ortelius/
 - name: ms-nginx
-  version: 10.0.97
+  version: 10.0.98
   repository: https://ortelius.github.io/ortelius/
 - name: ms-ui
-  version: 10.0.97
+  version: 10.0.98
   repository: https://ortelius.github.io/ortelius/
