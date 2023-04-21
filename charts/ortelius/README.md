@@ -10,22 +10,10 @@ Ortelius is a central evidence store of all your security and DevOps intelligenc
 
 This chart deploys all of the required secrets, services, and deployments on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
-### Changes in 10.0.54 - 10.0.77
-Updated all base images to remove vulnerabilities. Used cgr.dev/chainguard/python, cgr.dev/chainguard/jdk:latest, and python:3.10-alpine, eclipse-temurin:8-jdk-alpine base images. The cgr.dev ones work great if you do not have additional packages (openssl) to install otherwise alpine is needed.
-
-cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base image so they should not be used.
-
-### Changes in 10.0.53
-
-* Added new Microservice for ScoreCard
-* Updated ingress for running local Kind Cluster
-* Removed dependency on external jwt keys
-
 ## Prerequisites
 
 * Kubernetes 1.19+
 * Helm 3.2.0+
-* External Postgres Database
 
 ## Installing on Kind Cluster
 
@@ -56,7 +44,10 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
 
 2. Create the cluster
 
-    ```kind create cluster --config cluster.yaml -n ortelius```
+    ```console
+    mkdir /tmp/postgres
+    kind create cluster --config cluster.yaml -n ortelius
+    ```
 
 3. Connect to the cluster
 
@@ -67,7 +58,7 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
     a. Using the internal Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.307
+    ORTELIUS_VERSION=10.0.310
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set global.postgresql.enabled=true  --set global.nginxController.enabled=true  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -78,7 +69,7 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
     b. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.307
+    ORTELIUS_VERSION=10.0.310
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-general.dbuser=postgres --set ms-general.dbhost=postgres.hosted.com --set-string ms-general.dbport=5432 --set global.nginxController.enabled=true  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -118,7 +109,7 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
     a. Using the internal Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.307
+    ORTELIUS_VERSION=10.0.310
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set global.postgresql.enabled=true --set ms-nginx.ingress.type=k3d --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -129,7 +120,7 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
     b. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.307
+    ORTELIUS_VERSION=10.0.310
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-general.dbuser=postgres --set ms-general.dbhost=postgres.hosted.com --set-string ms-general.dbport=5432 --set ms-nginx.ingress.type=k3d  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -151,17 +142,17 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
 
       ```toml
       [compute]
-      zone = us-central1-c
+      zone = "us-central1-c"
       [container]
-      cluster = ortelius
+      cluster = "ortelius"
       [core]
-      disable_usage_reporting = False
-      project = ortelius-sandbox
+      disable_usage_reporting = false
+      project = "ortelius-sandbox"
       ```
 
 2. Setup Environment Variables
 
-   ```bash
+   ```console
    CLUSTER_NAME=ortelius
    SERVICE_ACCOUNT=ortelius-k8s@ortelius-sandbox.iam.gserviceaccount.com
    PROJECT=ortelius-sandbox
@@ -169,18 +160,22 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
 
 3. Create the Cluster
 
-   * `gcloud container clusters create ${CLUSTER_NAME} --logging=SYSTEM,API_SERVER --num-nodes=3 --enable-autoupgrade --machine-type=e2-standard-2 --region=us-central1 --preemptible --service-account=${SERVICE_ACCOUNT}`
+   ```console
+   gcloud container clusters create ${CLUSTER_NAME} --logging=SYSTEM,API_SERVER --num-nodes=3 --enable-autoupgrade --machine-type=e2-standard-2 --region=us-central1 --preemptible --service-account=${SERVICE_ACCOUNT}
+   ```
 
 4. Set kubectl config access
 
-   * `gcloud container clusters get-credentials ${CLUSTER_NAME} --zone=us-central1-c`
+   ```console
+   gcloud container clusters get-credentials ${CLUSTER_NAME} --zone=us-central1-c
+   ```
 
 5. Install Ortelius
 
     a. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.307
+    ORTELIUS_VERSION=10.0.310
     ORTELIUS_DNSNAME=ortelius.example.com
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
@@ -206,8 +201,8 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
 
 3. Setup Environment Variables
 
-   ```bash
-   ORTELIUS_VERSION=10.0.307
+   ```console
+   ORTELIUS_VERSION=10.0.310
    CLUSTER_NAME=ortelius
    ```
 
@@ -251,7 +246,7 @@ cgr.dev is based on wolfi. Google distroless has vulnerabilities in the base ima
     a. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.307
+    ORTELIUS_VERSION=10.0.310
     ORTELIUS_DNSNAME=ortelius.example.com
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
@@ -293,21 +288,21 @@ helm install my-release -f values.yaml ortelius/ortelius
 * `kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT`
 * kubectl port-forward help
 
-```console
-kubectl port-forward -h
-```
+    ```console
+    kubectl port-forward -h
+    ```
 
 * 8080 represents the local port on your machine http://localhost:8080
 
-```console
-kubectl port-forward svc/ms-nginx 8080:80 -n ortelius
-```
+    ```console
+    kubectl port-forward svc/ms-nginx 8080:80 -n ortelius
+    ```
 
 * 8443 represents the local port on your machine http://localhost:8443
 
-```console
-kubectl port-forward svc/ms-nginx 8443:443 -n ortelius
-```
+    ```console
+    kubectl port-forward svc/ms-nginx 8443:443 -n ortelius
+    ```
 
 ## Uninstalling the Chart
 
