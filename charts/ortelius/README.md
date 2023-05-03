@@ -58,7 +58,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     a. Using the internal Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.310
+    ORTELIUS_VERSION=10.0.336
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set global.postgresql.enabled=true  --set global.nginxController.enabled=true  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -69,7 +69,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     b. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.310
+    ORTELIUS_VERSION=10.0.336
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-general.dbuser=postgres --set ms-general.dbhost=postgres.hosted.com --set-string ms-general.dbport=5432 --set global.nginxController.enabled=true  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -79,40 +79,27 @@ This chart deploys all of the required secrets, services, and deployments on a [
 
     ```http://localhost/dmadminweb/Home```
 
-## Installing on k3s on KillerCoda
+    > Note: default userid/pass is admin/admin
 
-1. Login to KillerCoda Ubuntu  
+## Installing on Kubernetes on KillerCoda
 
-2. Install k3d cli
+1. Login to KillerCoda Kubernetes 1.27 Playground
 
-    ```console
-    curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
-    snap install kubectl --classic
-    snap install helm --classic
-    ```
-
-3. Create the cluster
+2. Create the database storage directory
 
     ```console
     mkdir /tmp/postgres
-    k3d cluster create ortelius --volume /tmp/postgres:/pgdata
     ```
 
-4. Connect to the cluster
-
-    ```console
-    k3d kubeconfig merge ortelius --kubeconfig-switch-context
-    ```
-
-5. Install Ortelius
+3. Install Ortelius
 
     a. Using the internal Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.310
+    ORTELIUS_VERSION=10.0.336
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
-    helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set global.postgresql.enabled=true --set ms-nginx.ingress.type=k3d --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
+    helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set global.postgresql.enabled=true --set ms-nginx.ingress.nodePort=30000 --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
     ```
 
     > Note: This will install Ortelius persisting the Postgres data on the host system in /tmp/postgres
@@ -120,18 +107,15 @@ This chart deploys all of the required secrets, services, and deployments on a [
     b. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.310
+    ORTELIUS_VERSION=10.0.336
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
-    helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-general.dbuser=postgres --set ms-general.dbhost=postgres.hosted.com --set-string ms-general.dbport=5432 --set ms-nginx.ingress.type=k3d  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
+    helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-general.dbuser=postgres --set ms-general.dbhost=postgres.hosted.com --set-string ms-general.dbport=5432 --set ms-nginx.ingress.nodePort=30000  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
     ```
 
-6. Access Ortelius UI
+4. Access Ortelius UI
 
-    ```console
-    ORTELIUS_HOST=$(kubectl get ingress -n ortelius ms-nginx | grep ms-nginx | awk '{print $4}')
-    http://${ORTELIUS_HOST}/dmadminweb/Home
-    ```
+    In Killercoda UI for your session, click on the 3 bars by your "Time Left", then "Traffic/Ports".  Enter in 30000 in the custom ports and then access the custom port.  This will start a new browser tab with Ortelius home page.  Use admin/admin to login.
 
 ## Installing on Google GKE
 
@@ -175,7 +159,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     a. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.310
+    ORTELIUS_VERSION=10.0.336
     ORTELIUS_DNSNAME=ortelius.example.com
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
@@ -186,6 +170,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
 
     ```https://${ORTELIUS_DNSNAME}/dmadminweb/Home```
 
+    > Note: default userid/pass is admin/admin
 
 ## Installing on AWS EKS
 
@@ -202,7 +187,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
 3. Setup Environment Variables
 
    ```console
-   ORTELIUS_VERSION=10.0.310
+   ORTELIUS_VERSION=10.0.336
    CLUSTER_NAME=ortelius
    ```
 
@@ -246,7 +231,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     a. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.310
+    ORTELIUS_VERSION=10.0.336
     ORTELIUS_DNSNAME=ortelius.example.com
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
@@ -256,6 +241,8 @@ This chart deploys all of the required secrets, services, and deployments on a [
 6. Access Ortelius UI
 
     ```https://${ORTELIUS_DNSNAME}/dmadminweb/Home```
+
+    > Note: default userid/pass is admin/admin
 
 ## Parameters
 
@@ -268,11 +255,12 @@ This chart deploys all of the required secrets, services, and deployments on a [
 | `ms-general.dbname`     | Postgres Database Name                                                                       | `postgres`      |
 | `ms-general.dbhost`     | Postgres Database Host Name                                                                  | `localhost`     |
 | `ms-general.dbport`     | Postgres Database Port                                                                       | `5432`          |
-| `ms-nginx.ingress.type` | default nginx ingress,  AWS Load Balancer or Google Load Balancer | `ssloff, alb, glb` | default `ssloff`  |
+| `ms-nginx.ingress.type` | default nginx ingress,  AWS Load Balancer or Google Load Balancer | `ssloff, alb, glb, k3s` | `ssloff`  |
+| `ms-nginx.ingress.nodePort` | set the nodePort to access the service | >= 30000 | default is random port number  |
 | `ms-nginx.ingress.alb_subnets`    | String of comma delimited subnets for the ALB - required when  `ms-nginx.ingress.type=alb`  |   |
 | `ms-nginx.ingress.alb_certificate_arn`    | ARN for the certificate from AWS Certificate Manager - required when  `ms-nginx.ingress.type=alb` |  |
 | `ms-nginx.ingress.dnsname`   | DNS Name that matches the certificate from AWS Certificate Manager - required when  `ms-nginx.ingress.type=alb` or `ms-nginx.ingress.type=glb` |  |
-| `ms-nginx.ingress.scheme`    | ALB scheme - required when  `ms-nginx.ingress.type=alb` |  `internal` or `internet-facing`  | default: `internal`|
+| `ms-nginx.ingress.scheme`    | ALB scheme - required when  `ms-nginx.ingress.type=alb` |  `internal` or `internet-facing`  | `internal`|
 
 > NOTE: Once this chart is deployed, it is not possible to change the application's access credentials, such as usernames or passwords, using Helm. To change these application credentials after deployment, delete any persistent volumes (PVs) used by the chart and re-deploy it, or use the application's built-in administrative tools if available.
 
@@ -283,6 +271,8 @@ helm install my-release -f values.yaml ortelius/ortelius
 ```
 
 ## Accessing the Ortelius UI After the Chart Install using Port Forwarding
+
+> Note: default userid/pass is admin/admin
 
 * Use a port forward with kubectl to the ms-nginx microservice service
 * `kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT`

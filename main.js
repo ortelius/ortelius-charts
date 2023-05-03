@@ -41,7 +41,7 @@ async function getChartEntries() {
         });
 
         const repoUrl = 'https://raw.githubusercontent.com/' + chartRepos[i] + '/' + sha + '/index.yaml';
-        
+
         await axios.get(repoUrl).then(response => {
             let parsedYaml = yaml.load(response.data)
             let entries = parsedYaml.entries
@@ -51,7 +51,7 @@ async function getChartEntries() {
                 latest = null;
 
                 Object.entries(entries[key]).forEach(entry => {
-                    
+
                     if (latest == null)
                         latest = entry;
                     else if (latest['created'] < entry['created'])
@@ -108,4 +108,3 @@ getChartEntries().then(() => {
         console.log(err)
     })
 })
-
