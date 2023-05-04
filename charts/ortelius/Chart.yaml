@@ -1,14 +1,15 @@
 apiVersion: v2
 name: ortelius
-description: Ortelius
+description: Supply Chain Evidence Catalog
 home: https://www.ortelius.io
 icon: https://ortelius.github.io/ortelius-charts/logo.png
 keywords:
 - Service Catalog
 - Microservices
 - SBOM
+- Supply Chain
 type: application
-version: 10.0.336
+version: 10.0.337
 appVersion: 10.0.0
 dependencies:
 - name: ms-dep-pkg-cud
