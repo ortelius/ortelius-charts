@@ -10,12 +10,22 @@ on:
     paths-ignore:
       - 'chart/**'
 
+permissions:  # added using https://github.com/step-security/secure-repo
+  contents: read
+
 jobs:
   release:
+    permissions:
+      contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
     runs-on: ubuntu-latest
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@6b3083af2869dc3314a0257a42f4af696cc79ba3 # v2.3.1
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
         with:
           fetch-depth: 0
 
@@ -25,12 +35,12 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       - name: Install Helm
-        uses: azure/setup-helm@v3
+        uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 # v3.5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
         with:
           node-version: '18.x'
 
@@ -40,14 +50,31 @@ jobs:
           node main.js
 
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a # v4.16.0
         with:
           commit_message: Update main chart
 
       - name: Sleep 5 mins
         run: sleep 5m
 
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.5.0
+      - name: Prepare GPG key
+        run: |
+          gpg_dir=.cr-gpg
+          mkdir "$gpg_dir"
+          keyring="$gpg_dir/secring.gpg"
+          base64 -d <<< "$GPG_KEYRING_BASE64" > "$keyring"
+          passphrase_file="$gpg_dir/passphrase"
+          echo "$GPG_PASSPHRASE" > "$passphrase_file"
+          echo "CR_PASSPHRASE_FILE=$passphrase_file" >> "$GITHUB_ENV"
+          echo "CR_KEYRING=$keyring" >> "$GITHUB_ENV"
         env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GPG_KEYRING_BASE64: "${{ secrets.GPG_KEYRING_BASE64 }}"
+          GPG_PASSPHRASE: "${{ secrets.GPG_PASSPHRASE }}"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@98bccfd32b0f76149d188912ac8e45ddd3f8695f # v1.4.1
+        with:
+          charts_dir: chart
+          config: .cr.yaml
+        env:
+          CR_TOKEN: "${{ secrets.HELM_INDEXER_TOKEN }}"
