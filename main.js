@@ -84,10 +84,10 @@ function createYamlOutput() {
     const output = yaml.dump({
         apiVersion: 'v2',
         name: 'ortelius',
-        description: 'Ortelius',
+        description: 'Supply Chain Evidence Catalog',
         home: 'https://www.ortelius.io',
         icon: 'https://ortelius.github.io/ortelius-charts/logo.png',
-        keywords: [ 'Service Catalog', 'Microservices', 'SBOM' ],
+        keywords: [ 'Service Catalog', 'Microservices', 'SBOM', 'Supply Chain' ],
         type: 'application',
         version: chartVersion,
         appVersion: '10.0.0',
