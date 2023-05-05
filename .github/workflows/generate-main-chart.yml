@@ -62,15 +62,32 @@ jobs:
           echo "$GPG_PASSPHRASE" > "$passphrase_file"
           echo "CR_PASSPHRASE_FILE=$passphrase_file" >> "$GITHUB_ENV"
           echo "CR_KEYRING=$keyring" >> "$GITHUB_ENV"
+          echo "CR_KEY=$(cat .cr.yaml | grep key: | awk '{print $(NF-1)" "$NF}')" >> "$GITHUB_ENV"
         env:
           GPG_KEYRING_BASE64: "${{ secrets.GPG_KEYRING_BASE64 }}"
           GPG_PASSPHRASE: "${{ secrets.GPG_PASSPHRASE }}"
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@98bccfd32b0f76149d188912ac8e45ddd3f8695f # v1.4.1
-        with:
-          charts_dir: chart
-          config: .cr.yaml
+        run: |
+          TAG=$(basename $(helm package chart/ortelius -u --key "${{ env.CR_KEY }}" --sign --keyring "${{ env.CR_KEYRING }}"" --passphrase-file "${{ env.CR_PASSPHRASE_FILE }}" | cut -d: -f2) .tgz)
+          ls *.prov | xargs -I {} sh -c 'mv $1 `basename $1 .prov`.asc' - {}
+          echo "Created ${TAG}"  
+          git add chart/ortelius/Chart.yaml
+          git commit -m "Updated main chart"
+          git tag -f "${TAG}"
+          git push
+          git push --tags
+          gh release create "${TAG}" ${TAG}.* --title "${TAG}" --repo ortelius/ortelius-charts --notes "Supply Chain Evidence Catalog"
+          git show gh-pages:index.yaml > index.yaml
+          helm repo index  chart/ortelius --merge index.yaml
+          mv chart/ortelius/index.yaml .
+          git add index.yaml
+          git commit -m "update index.yaml"
+          git checkout gh-pages
+          git show main:index.yaml > index.yaml
+          git add index.yaml
+          git commit -m "Generate Main Charts ${TAG}"
+          git push
         env:
           CR_TOKEN: "${{ secrets.HELM_INDEXER_TOKEN }}"
 
