@@ -73,3 +73,8 @@ jobs:
           config: .cr.yaml
         env:
           CR_TOKEN: "${{ secrets.HELM_INDEXER_TOKEN }}"
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update main chart
