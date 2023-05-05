@@ -9,8 +9,12 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.339
+version: 10.0.340
 appVersion: 10.0.0
+annotations:
+  artifacthub.io/signKey: |
+    fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
+    url: https://ortelius.io/ortelius.key
 dependencies:
 - name: ms-dep-pkg-cud
   version: 10.0.82
