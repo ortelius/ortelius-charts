@@ -1,0 +1,33 @@
+dependencies:
+- name: ms-dep-pkg-cud
+  repository: https://ortelius.github.io/ms-dep-pkg-cud/
+  version: 10.0.82
+- name: ms-dep-pkg-r
+  repository: https://ortelius.github.io/ms-dep-pkg-r/
+  version: 10.0.174
+- name: ms-textfile-crud
+  repository: https://ortelius.github.io/ms-textfile-crud/
+  version: 10.0.70
+- name: ms-compitem-crud
+  repository: https://ortelius.github.io/ms-compitem-crud/
+  version: 10.0.53
+- name: ms-validate-user
+  repository: https://ortelius.github.io/ms-validate-user/
+  version: 10.0.64
+- name: ms-scorecard
+  repository: https://ortelius.github.io/ms-scorecard/
+  version: 10.0.121
+- name: ms-postgres
+  repository: https://ortelius.github.io/ms-postgres/
+  version: 10.0.14
+- name: ms-general
+  repository: https://ortelius.github.io/ortelius/
+  version: 10.0.108
+- name: ms-nginx
+  repository: https://ortelius.github.io/ortelius/
+  version: 10.0.108
+- name: ms-ui
+  repository: https://ortelius.github.io/ortelius/
+  version: 10.0.108
+digest: sha256:3d5089e6258253af913c2569df8df71a218d9f9542fa6c430135da075e186bdf
+generated: "2023-05-05T23:17:01.095511872Z"
