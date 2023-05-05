@@ -75,7 +75,7 @@ jobs:
           git commit -m "Updated main chart"
           git tag -f "${TAG}"
           git push
-          git push --tags
+          git push -f --tags
           gh release create "${TAG}" ${TAG}.* --title "${TAG}" --repo ortelius/ortelius-charts --notes "Supply Chain Evidence Catalog"
           helm repo index  chart/ortelius --merge index.yaml
           mv chart/ortelius/index.yaml .
