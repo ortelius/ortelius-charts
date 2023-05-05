@@ -22,7 +22,7 @@ async function getChartEntries() {
         sha = response.data.sha;
     });
 
-    url = 'https://raw.githubusercontent.com/ortelius/ortelius-charts/' + sha + '/charts/ortelius/Chart.yaml';
+    url = 'https://raw.githubusercontent.com/ortelius/ortelius-charts/' + sha + '/chart/ortelius/Chart.yaml';
 
     await axios.get(url).then(response => {
         let parsedYaml = yaml.load(response.data)
@@ -104,7 +104,7 @@ let chartVersion = ''
 getChartEntries().then(() => {
     const yamlOutput = createYamlOutput()
     console.log(yamlOutput);
-    fs.writeFileSync("./charts/ortelius/Chart.yaml", yamlOutput, "utf8", (err) => {
+    fs.writeFileSync("./chart/ortelius/Chart.yaml", yamlOutput, "utf8", (err) => {
         console.log(err)
     })
 })
