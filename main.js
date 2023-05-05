@@ -81,7 +81,12 @@ async function getChartEntries() {
 }
 
 function createYamlOutput() {
-    const output = yaml.dump({
+
+    let annotations = {}
+
+    annotations['artifacthub.io/signKey'] = "fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9\nurl: https://ortelius.io/ortelius.key"
+
+    let output = yaml.dump({
         apiVersion: 'v2',
         name: 'ortelius',
         description: 'Supply Chain Evidence Catalog',
@@ -91,9 +96,11 @@ function createYamlOutput() {
         type: 'application',
         version: chartVersion,
         appVersion: '10.0.0',
+        annotations: annotations,
         dependencies: chartEntries,
     }, {noArrayIndent: true})
 
+    output = output.replace('|-', '|')
     return output
 }
 // -----------------
