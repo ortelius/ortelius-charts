@@ -69,7 +69,7 @@ jobs:
           set -x
           git pull --all; for remote in `git branch -r | grep -v main | grep -v \>`; do git branch --track ${remote#origin/} $remote; done
           TAG=$(basename $(helm package chart/ortelius -u --key "${{ env.CR_KEY }}" --sign --keyring "${{ env.CR_KEYRING }}" --passphrase-file "${{ env.CR_PASSPHRASE_FILE }}" | cut -d: -f2) .tgz)
-          rm -rf .cr-gpg
+          rm -rf .cr-gpg chart/ortelius/charts/*.tgz
           ls *.prov | xargs -I {} sh -c 'mv $1 `basename $1 .prov`.asc' - {}
           echo "Created ${TAG}" 
           git add chart/ortelius/Chart.yaml
