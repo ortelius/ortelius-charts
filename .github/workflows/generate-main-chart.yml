@@ -79,8 +79,8 @@ jobs:
           git push -f --tags
           gh release create "${TAG}" ${TAG}.* --title "${TAG}" --repo ortelius/ortelius-charts --notes "Supply Chain Evidence Catalog"
           cp ${TAG}.tgz chart/ortelius/charts
-          git show gh-pages:index.yaml > index.yaml
-          helm repo index  chart/ortelius/charts --merge index.yaml
+          git show gh-pages:index.yaml > /tmp/index.yaml
+          helm repo index  chart/ortelius/charts --merge /tmp/index.yaml
           mv chart/ortelius/charts/index.yaml /tmp
           git reset --hard
           git checkout gh-pages
