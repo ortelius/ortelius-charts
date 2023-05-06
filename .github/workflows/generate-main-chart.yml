@@ -82,7 +82,6 @@ jobs:
           git show gh-pages:index.yaml > index.yaml
           helm repo index  chart/ortelius/charts --merge index.yaml
           mv chart/ortelius/charts/index.yaml /tmp
-          cat /tmp/index.yaml
           git reset --hard
           git checkout gh-pages
           mv /tmp/index.yaml index.yaml
