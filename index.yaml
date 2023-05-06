@@ -1,6 +1,173 @@
 apiVersion: v1
 entries:
+  ms-compitem-crud:
+  - apiVersion: v2
+    appVersion: 10.0.53
+    created: "2023-05-06T13:43:54.570050076Z"
+    description: Dependency Packages
+    digest: c9d53563130544e52f5460316665ef0bb8def8079b6cfcee90e1098e3e4df1ca
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-compitem-crud
+    type: application
+    urls:
+    - ms-compitem-crud-10.0.53.tgz
+    version: 10.0.53
+  ms-dep-pkg-cud:
+  - apiVersion: v2
+    appVersion: 10.0.82
+    created: "2023-05-06T13:43:54.570311389Z"
+    description: Dependency Packages
+    digest: ac7a0410416c3025aa436d9714552ba1bf33963fad2dd0119b98c86976ea9a1f
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-cud
+    type: application
+    urls:
+    - ms-dep-pkg-cud-10.0.82.tgz
+    version: 10.0.82
+  ms-dep-pkg-r:
+  - apiVersion: v2
+    appVersion: 10.0.174
+    created: "2023-05-06T13:43:54.570560901Z"
+    description: Dependency Packages
+    digest: b4209f816b0a309e0640ed948b011469dc6ccda067af3b053d13514d94cd9cc8
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-dep-pkg-r
+    type: application
+    urls:
+    - ms-dep-pkg-r-10.0.174.tgz
+    version: 10.0.174
+  ms-general:
+  - apiVersion: v1
+    appVersion: 10.0.108
+    created: "2023-05-06T13:43:54.570802913Z"
+    description: A Helm chart for Kubernetes
+    digest: 83c0498ce5af4de16795791e417642b13065b61a5fa59e3e2166c6c752cfac0d
+    name: ms-general
+    urls:
+    - ms-general-10.0.108.tgz
+    version: 10.0.108
+  ms-nginx:
+  - apiVersion: v1
+    appVersion: 10.0.108
+    created: "2023-05-06T13:43:54.571880166Z"
+    description: A Helm chart for Kubernetes
+    digest: ad94a5e65f9867a8e982f90067af9fc506f156f05c9e47d5859b63acc33d1321
+    name: ms-nginx
+    urls:
+    - ms-nginx-10.0.108.tgz
+    version: 10.0.108
+  ms-postgres:
+  - apiVersion: v1
+    appVersion: 10.0.14
+    created: "2023-05-06T13:43:54.572406692Z"
+    description: Dependency Packages
+    digest: e1f18b555e2332b81c5c050f033c015a16790edabc7769c39317cf4fba39c5a9
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-postgres
+    type: application
+    urls:
+    - ms-postgres-10.0.14.tgz
+    version: 10.0.14
+  ms-scorecard:
+  - apiVersion: v2
+    appVersion: 10.0.121
+    created: "2023-05-06T13:43:54.572830113Z"
+    description: Dependency Packages
+    digest: 91bd61c0b19056705f012c313d9f24d253f24f9e05b8f1dc711e6cc0213b4728
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-scorecard
+    type: application
+    urls:
+    - ms-scorecard-10.0.121.tgz
+    version: 10.0.121
+  ms-textfile-crud:
+  - apiVersion: v2
+    appVersion: 10.0.70
+    created: "2023-05-06T13:43:54.573209232Z"
+    description: Dependency Packages
+    digest: 944cad63b7fa7d38cd1f0738169c94346b8d4b60a401bf759da95cd42c423f11
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-textfile-crud
+    type: application
+    urls:
+    - ms-textfile-crud-10.0.70.tgz
+    version: 10.0.70
+  ms-ui:
+  - apiVersion: v1
+    appVersion: 10.0.108
+    created: "2023-05-06T13:43:54.573516147Z"
+    description: A Helm chart for Kubernetes
+    digest: 99745e5e39a00c6296ab8a6650daea5119ced00044e27bb50ee58270ccd4808a
+    name: ms-ui
+    urls:
+    - ms-ui-10.0.108.tgz
+    version: 10.0.108
+  ms-validate-user:
+  - apiVersion: v2
+    appVersion: 10.0.64
+    created: "2023-05-06T13:43:54.574449394Z"
+    description: Dependency Packages
+    digest: 87325e7f8491d2796ab8e044cd08f49eb5928fa2072eb7cde5db4b666cb1b324
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: ms-validate-user
+    type: application
+    urls:
+    - ms-validate-user-10.0.64.tgz
+    version: 10.0.64
   ortelius:
+  - annotations:
+      artifacthub.io/signKey: |
+        fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
+        url: https://ortelius.io/ortelius.key
+    apiVersion: v2
+    appVersion: 10.0.0
+    created: "2023-05-06T13:43:54.576757708Z"
+    dependencies:
+    - name: ms-dep-pkg-cud
+      repository: https://ortelius.github.io/ms-dep-pkg-cud/
+      version: 10.0.82
+    - name: ms-dep-pkg-r
+      repository: https://ortelius.github.io/ms-dep-pkg-r/
+      version: 10.0.174
+    - name: ms-textfile-crud
+      repository: https://ortelius.github.io/ms-textfile-crud/
+      version: 10.0.70
+    - name: ms-compitem-crud
+      repository: https://ortelius.github.io/ms-compitem-crud/
+      version: 10.0.53
+    - name: ms-validate-user
+      repository: https://ortelius.github.io/ms-validate-user/
+      version: 10.0.64
+    - name: ms-scorecard
+      repository: https://ortelius.github.io/ms-scorecard/
+      version: 10.0.121
+    - condition: global.postgresql.enabled
+      name: ms-postgres
+      repository: https://ortelius.github.io/ms-postgres/
+      version: 10.0.14
+    - name: ms-general
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.108
+    - name: ms-nginx
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.108
+    - name: ms-ui
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.108
+    description: Supply Chain Evidence Catalog
+    digest: 818bceef0866d2cf826001b2ceb8533eb611bde972083b3bb01030e58535e23c
+    home: https://www.ortelius.io
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    keywords:
+    - Service Catalog
+    - Microservices
+    - SBOM
+    - Supply Chain
+    name: ortelius
+    type: application
+    urls:
+    - ortelius-10.0.350.tgz
+    version: 10.0.350
   - apiVersion: v2
     appVersion: 10.0.0
     created: "2023-05-03T21:03:12.088035166Z"
@@ -14547,5 +14714,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.6/ortelius-10.0.6.tgz
     version: 10.0.6
-generated: "2023-05-03T21:03:12.089370581Z"
-
+generated: "2023-05-06T13:43:54.569578552Z"
