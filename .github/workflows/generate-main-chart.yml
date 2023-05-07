@@ -44,6 +44,9 @@ jobs:
         with:
           node-version: '18.x'
 
+      - name: Sleep 5 mins for page caching
+        run: sleep 5m
+
       - name: Generate Main Chart
         run: |
           yarn install
