@@ -52,6 +52,11 @@ jobs:
           yarn install
           node main.js
 
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update main chart
+
       - name: Prepare GPG key
         run: |
           gpg_dir=.cr-gpg
@@ -95,8 +100,3 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.HELM_INDEXER_TOKEN }}"
           GH_TOKEN: "${{ secrets.HELM_INDEXER_TOKEN }}"
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update main chart
