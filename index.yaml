@@ -7,7 +7,7 @@ entries:
         url: https://ortelius.io/ortelius.key
     apiVersion: v2
     appVersion: 10.0.0
-    created: "2023-05-16T17:24:04.493378994Z"
+    created: "2023-05-16T17:45:57.443059891Z"
     dependencies:
     - name: ms-dep-pkg-cud
       repository: https://ortelius.github.io/ms-dep-pkg-cud/
@@ -17,16 +17,16 @@ entries:
       version: 10.0.179
     - name: ms-textfile-crud
       repository: https://ortelius.github.io/ms-textfile-crud/
-      version: 10.0.81
+      version: 10.0.82
     - name: ms-compitem-crud
       repository: https://ortelius.github.io/ms-compitem-crud/
-      version: 10.0.61
+      version: 10.0.62
     - name: ms-validate-user
       repository: https://ortelius.github.io/ms-validate-user/
       version: 10.0.79
     - name: ms-scorecard
       repository: https://ortelius.github.io/ms-scorecard/
-      version: 10.0.128
+      version: 10.0.129
     - condition: global.postgresql.enabled
       name: ms-postgres
       repository: https://ortelius.github.io/ms-postgres/
@@ -41,7 +41,7 @@ entries:
       repository: https://ortelius.github.io/ortelius/
       version: 10.0.108
     description: Supply Chain Evidence Catalog
-    digest: d6fb94f389ad4ad58c04539d34f80e79b7c90e549ad36c10a7a94376d648bf8e
+    digest: fc5c4a6830029a2eda8a54a6af5811cf7607c95b813dcd54c6582b5f73c193b5
     home: https://www.ortelius.io
     icon: https://ortelius.github.io/ortelius-charts/logo.png
     keywords:
@@ -15183,4 +15183,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.6/ortelius-10.0.6.tgz
     version: 10.0.6
-generated: "2023-05-16T17:24:04.491226186Z"
+generated: "2023-05-16T17:45:57.440237831Z"
