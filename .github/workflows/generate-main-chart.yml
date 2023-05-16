@@ -34,59 +34,11 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Install Helm
-        uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 # v3.5
+      - name: Helm Chart Releaser
+        uses: ortelius/ms-cr-action@v1.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Use Node.js
-        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
-        with:
-          node-version: '18.x'
-
-      - name: Prepare GPG key
-        run: |
-          gpg_dir=.cr-gpg
-          mkdir "$gpg_dir"
-          keyring="$gpg_dir/secring.gpg"
-          base64 -d <<< "$GPG_KEYRING_BASE64" > "$keyring"
-          passphrase_file="$gpg_dir/passphrase"
-          echo "$GPG_PASSPHRASE" > "$passphrase_file"
-          echo "CR_PASSPHRASE_FILE=$passphrase_file" >> "$GITHUB_ENV"
-          echo "CR_KEYRING=$keyring" >> "$GITHUB_ENV"
-          echo "CR_KEY=$(cat .cr.yaml | grep key: | awk '{print $(NF-1)" "$NF}')" >> "$GITHUB_ENV"
-        env:
-          GPG_KEYRING_BASE64: "${{ secrets.GPG_KEYRING_BASE64 }}"
-          GPG_PASSPHRASE: "${{ secrets.GPG_PASSPHRASE }}"
-
-      - name: Run chart-releaser
-        run: |
-          set -x
-          sleep 5m
-          git pull --all; for remote in `git branch -r | grep -v main | grep -v \>`; do git branch --track ${remote#origin/} $remote; done
-          yarn install
-          node main.js
-          TAG=$(basename $(helm package chart/ortelius -u --key "${{ env.CR_KEY }}" --sign --keyring "${{ env.CR_KEYRING }}" --passphrase-file "${{ env.CR_PASSPHRASE_FILE }}" | cut -d: -f2) .tgz)
-          rm -rf .cr-gpg chart/ortelius/charts/*.tgz
-          ls *.prov | xargs -I {} sh -c 'mv $1 `basename $1 .prov`.asc' - {}
-          gh release delete "${TAG}" --cleanup-tag -y | test 1
-          echo "Created ${TAG}" 
-          git add chart/ortelius/Chart.yaml
-          git commit -m "Updated main chart"
-          git tag -f "${TAG}"
-          git push
-          git push -f --tags
-          gh release create "${TAG}" ${TAG}.* --title "${TAG}" --repo ortelius/ortelius-charts --notes "Supply Chain Evidence Catalog"
-          cp ${TAG}.tgz chart/ortelius/charts
-          git show gh-pages:index.yaml > /tmp/index.yaml
-          helm repo index  chart/ortelius/charts --merge /tmp/index.yaml
-          mv chart/ortelius/charts/index.yaml /tmp
-          git reset --hard
-          git checkout gh-pages
-          mv /tmp/index.yaml index.yaml
-          git add index.yaml
-          git commit -m "Generate Main Charts ${TAG}"
-          git push
-        env:
-          CR_TOKEN: "${{ secrets.HELM_INDEXER_TOKEN }}"
-          GH_TOKEN: "${{ secrets.HELM_INDEXER_TOKEN }}"
+          gpg_keyring_base64: ${{ secrets.GPG_KEYRING_BASE64 }}
+          gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          gpg_key: ${{ secrets.GPG_KEY }}
+          gh_token: ${{ secrets.HELM_INDEXER_TOKEN }}
+          chart: chart/ortelius
