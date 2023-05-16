@@ -9,7 +9,7 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.362
+version: 10.0.363
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
@@ -17,22 +17,22 @@ annotations:
     url: https://ortelius.io/ortelius.key
 dependencies:
 - name: ms-dep-pkg-cud
-  version: 10.0.87
+  version: 10.0.89
   repository: https://ortelius.github.io/ms-dep-pkg-cud/
 - name: ms-dep-pkg-r
-  version: 10.0.177
+  version: 10.0.179
   repository: https://ortelius.github.io/ms-dep-pkg-r/
 - name: ms-textfile-crud
-  version: 10.0.81
+  version: 10.0.84
   repository: https://ortelius.github.io/ms-textfile-crud/
 - name: ms-compitem-crud
-  version: 10.0.61
+  version: 10.0.67
   repository: https://ortelius.github.io/ms-compitem-crud/
 - name: ms-validate-user
-  version: 10.0.79
+  version: 10.0.80
   repository: https://ortelius.github.io/ms-validate-user/
 - name: ms-scorecard
-  version: 10.0.128
+  version: 10.0.129
   repository: https://ortelius.github.io/ms-scorecard/
 - name: ms-postgres
   version: 10.0.14
