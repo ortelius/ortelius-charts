@@ -31,5 +31,5 @@ jobs:
           gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
           gpg_key: ${{ secrets.GPG_KEY }}
           gh_token: ${{ secrets.HELM_INDEXER_TOKEN }}
-          gh_handle: ${{ needs.setenv.outputs.gh_handle }}
+          gh_handle: $GITHUB_ACTOR
           chart: chart/ortelius
