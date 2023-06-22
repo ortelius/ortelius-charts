@@ -58,7 +58,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     a. Using the internal Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.336
+    ORTELIUS_VERSION=10.0.462
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set global.postgresql.enabled=true  --set global.nginxController.enabled=true  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -69,7 +69,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     b. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.336
+    ORTELIUS_VERSION=10.0.462
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-general.dbuser=postgres --set ms-general.dbhost=postgres.hosted.com --set-string ms-general.dbport=5432 --set global.nginxController.enabled=true  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -96,7 +96,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     a. Using the internal Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.336
+    ORTELIUS_VERSION=10.0.462
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set global.postgresql.enabled=true --set ms-nginx.ingress.nodePort=30000 --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -107,7 +107,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     b. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.336
+    ORTELIUS_VERSION=10.0.462
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
     helm upgrade --install my-release ortelius/ortelius --set ms-general.dbpass=my_db_password --set ms-general.dbuser=postgres --set ms-general.dbhost=postgres.hosted.com --set-string ms-general.dbport=5432 --set ms-nginx.ingress.nodePort=30000  --version "${ORTELIUS_VERSION}" --namespace ortelius --create-namespace
@@ -159,7 +159,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     a. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.336
+    ORTELIUS_VERSION=10.0.462
     ORTELIUS_DNSNAME=ortelius.example.com
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
@@ -187,7 +187,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
 3. Setup Environment Variables
 
    ```console
-   ORTELIUS_VERSION=10.0.336
+   ORTELIUS_VERSION=10.0.462
    CLUSTER_NAME=ortelius
    ```
 
@@ -231,7 +231,7 @@ This chart deploys all of the required secrets, services, and deployments on a [
     a. Using the external Postgres database:
 
     ```console
-    ORTELIUS_VERSION=10.0.336
+    ORTELIUS_VERSION=10.0.462
     ORTELIUS_DNSNAME=ortelius.example.com
     helm repo add ortelius https://ortelius.github.io/ortelius-charts/
     helm repo update
