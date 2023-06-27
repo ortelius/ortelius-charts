@@ -24,22 +24,22 @@ This chart deploys all of the required secrets, services, and deployments on a [
     apiVersion: kind.x-k8s.io/v1alpha4
     nodes:
     - role: control-plane
-    kubeadmConfigPatches:
-    - |
+      kubeadmConfigPatches:
+      - |
         kind: InitConfiguration
         nodeRegistration:
-        kubeletExtraArgs:
+          kubeletExtraArgs:
             node-labels: "ingress-ready=true"
-        extraPortMappings:
-        - containerPort: 80
-            hostPort: 80
-            protocol: TCP
-        - containerPort: 443
-            hostPort: 443
-            protocol: TCP
-        extraMounts:
-        - hostPath: /tmp/postgres
-            containerPath: /pgdata
+      extraPortMappings:
+      - containerPort: 80
+        hostPort: 80
+        protocol: TCP
+      - containerPort: 443
+        hostPort: 443
+        protocol: TCP
+      extraMounts:
+      - hostPath: /tmp/postgres
+        containerPath: /pgdata
     ```
 
 2. Create the cluster
