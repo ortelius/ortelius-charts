@@ -101,6 +101,18 @@ function createYamlOutput() {
     }, {noArrayIndent: true})
 
     output = output.replace('|-', '|')
+
+    fs.readFile("./chart/ortelius/README.md", 'utf8', function (err,data) {
+        if (err) {
+          return console.log(err);
+        }
+        var result = data.replace(/ORTELIUS_VERSION=\d+\.\d+\.\d+/g, 'ORTELIUS_VERSION=' + chartVersion);
+      
+        fs.writeFile("./chart/ortelius/README.md", result, 'utf8', function (err) {
+           if (err) return console.log(err);
+        });
+      });
+
     return output
 }
 // -----------------
@@ -115,3 +127,5 @@ getChartEntries().then(() => {
         console.log(err)
     })
 })
+
+
