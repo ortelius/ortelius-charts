@@ -7,7 +7,7 @@ entries:
         url: https://ortelius.io/ortelius.key
     apiVersion: v2
     appVersion: 10.0.0
-    created: "2023-08-04T14:22:08.320863427Z"
+    created: "2023-08-04T14:22:22.13478165Z"
     dependencies:
     - name: ms-dep-pkg-cud
       repository: https://ortelius.github.io/ms-dep-pkg-cud/
@@ -41,7 +41,7 @@ entries:
       repository: https://ortelius.github.io/ortelius/
       version: 10.0.111
     description: Supply Chain Evidence Catalog
-    digest: b570431e7ab3f59a05e7d5c448f88365c30f9e4acd92549fe15c4afa8eafcf95
+    digest: c5ed0015efcc6a229d0fe98b47a59acaf9f57e829f56550e66a23b401c22fc8e
     home: https://www.ortelius.io
     icon: https://ortelius.github.io/ortelius-charts/logo.png
     keywords:
@@ -52,15 +52,15 @@ entries:
     name: ortelius
     type: application
     urls:
-    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.660/ortelius-10.0.660.tgz
-    version: 10.0.660
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.661/ortelius-10.0.661.tgz
+    version: 10.0.661
   - annotations:
       artifacthub.io/signKey: |
         fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
         url: https://ortelius.io/ortelius.key
     apiVersion: v2
     appVersion: 10.0.0
-    created: "2023-08-04T14:16:27.053086756Z"
+    created: "2023-08-04T14:17:00.035969859Z"
     dependencies:
     - name: ms-dep-pkg-cud
       repository: https://ortelius.github.io/ms-dep-pkg-cud/
@@ -94,7 +94,7 @@ entries:
       repository: https://ortelius.github.io/ortelius/
       version: 10.0.111
     description: Supply Chain Evidence Catalog
-    digest: a733fc27c90adb66b19ce8c3c3319c04fef0a6a3af45dfdf5c01d44cb38ee53e
+    digest: 4decdabbbb92ac53c5bfa0a236cbd7b76737901f5f1b3ed3d60cc6598b75189a
     home: https://www.ortelius.io
     icon: https://ortelius.github.io/ortelius-charts/logo.png
     keywords:
@@ -105,8 +105,8 @@ entries:
     name: ortelius
     type: application
     urls:
-    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.650/ortelius-10.0.650.tgz
-    version: 10.0.650
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.651/ortelius-10.0.651.tgz
+    version: 10.0.651
   - annotations:
       artifacthub.io/signKey: |
         fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
@@ -5301,4 +5301,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.394/ortelius-10.0.394.tgz
     version: 10.0.394
-generated: "2023-08-04T14:22:08.318348372Z"
+generated: "2023-08-04T14:22:22.132076949Z"
