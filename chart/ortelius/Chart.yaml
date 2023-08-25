@@ -9,7 +9,7 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.788
+version: 10.0.789
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
