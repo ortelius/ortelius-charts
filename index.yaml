@@ -7,7 +7,7 @@ entries:
         url: https://ortelius.io/ortelius.key
     apiVersion: v2
     appVersion: 10.0.0
-    created: "2023-09-01T00:32:06.532752856Z"
+    created: "2023-09-01T00:37:39.56552691Z"
     dependencies:
     - name: ms-dep-pkg-cud
       repository: https://ortelius.github.io/ms-dep-pkg-cud/
@@ -20,7 +20,7 @@ entries:
       version: 10.0.204
     - name: ms-compitem-crud
       repository: https://ortelius.github.io/ms-compitem-crud/
-      version: 10.0.179
+      version: 10.0.182
     - name: ms-validate-user
       repository: https://ortelius.github.io/ms-validate-user/
       version: 10.0.237
@@ -41,7 +41,7 @@ entries:
       repository: https://ortelius.github.io/ortelius/
       version: 10.0.123
     description: Supply Chain Evidence Catalog
-    digest: 6f03d3b1089010dae2445b545d78a068757de315b17f69fa209687da30b181b2
+    digest: a91a69370b7ee77ba95565375999c5e00a601bf2db94a40e8eb88ebd9fe489cf
     home: https://www.ortelius.io
     icon: https://ortelius.github.io/ortelius-charts/logo.png
     keywords:
@@ -52,8 +52,8 @@ entries:
     name: ortelius
     type: application
     urls:
-    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.873/ortelius-10.0.873.tgz
-    version: 10.0.873
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.874/ortelius-10.0.874.tgz
+    version: 10.0.874
   - annotations:
       artifacthub.io/signKey: |
         fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
@@ -9329,4 +9329,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.394/ortelius-10.0.394.tgz
     version: 10.0.394
-generated: "2023-09-01T00:32:06.530541267Z"
+generated: "2023-09-01T00:37:39.563370774Z"
