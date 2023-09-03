@@ -7,7 +7,7 @@ entries:
         url: https://ortelius.io/ortelius.key
     apiVersion: v2
     appVersion: 10.0.0
-    created: "2023-09-03T01:45:12.455554954Z"
+    created: "2023-09-03T01:47:35.161802597Z"
     dependencies:
     - name: ms-dep-pkg-cud
       repository: https://ortelius.github.io/ms-dep-pkg-cud/
@@ -41,7 +41,7 @@ entries:
       repository: https://ortelius.github.io/ortelius/
       version: 10.0.126
     description: Supply Chain Evidence Catalog
-    digest: 2ad5fe2a4b0636cef6ce5ed932a63d2fec100eabd48f621074d7bec557e8d3c3
+    digest: f61fea50085526e693d88cdc7a4f690009e59f8f98b5c578f43e6af89c997866
     home: https://www.ortelius.io
     icon: https://ortelius.github.io/ortelius-charts/logo.png
     keywords:
@@ -52,8 +52,8 @@ entries:
     name: ortelius
     type: application
     urls:
-    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.971/ortelius-10.0.971.tgz
-    version: 10.0.971
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.972/ortelius-10.0.972.tgz
+    version: 10.0.972
   - annotations:
       artifacthub.io/signKey: |
         fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
@@ -12085,4 +12085,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.394/ortelius-10.0.394.tgz
     version: 10.0.394
-generated: "2023-09-03T01:45:12.452919612Z"
+generated: "2023-09-03T01:47:35.15971587Z"
