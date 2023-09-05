@@ -6,28 +6,35 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'chart/**'
+      - "charts/**"
 
-permissions:  # added using https://github.com/step-security/secure-repo
+permissions: # added using https://github.com/step-security/secure-repo
   contents: read
 
 jobs:
-  release:
-    permissions:
-      contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
-    runs-on: ubuntu-latest
-    steps:
-      - name: Harden Runner
-        uses: step-security/harden-runner@6b3083af2869dc3314a0257a42f4af696cc79ba3 # v2.3.1
-        with:
-          egress-policy: audit
+  setenv:
+    uses: ortelius/workflow-toolkit/.github/workflows/env-config-workflow.yml@037a22b92fc8a18174e3bddecbc529f49baec75a
+    with:
+      gh_head_ref: ${{ github.head_ref }}
+      gh_ref_name: ${{ github.ref_name }}
+      gh_event_repo_name: ${{ github.event.repository.name }}
+      gh_sha: ${{ github.sha }}
+      gh_repo: ${{ github.repository }}
+      gh_run_number: ${{ github.run_number }}
 
-      - name: Helm Chart Releaser
-        uses: ortelius/ms-cr-action@d98a4163765db41dbc8159f3a31f30f77bbe23bd # v1.2.0
-        with:
-          gpg_keyring_base64: ${{ secrets.GPG_KEYRING_BASE64 }}
-          gpg_passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          gpg_key: ${{ secrets.GPG_KEY }}
-          gh_token: ${{ secrets.HELM_INDEXER_TOKEN }}
-          gh_handle: $GITHUB_ACTOR
-          chart: chart/ortelius
+  helm:
+    permissions:
+      contents: write
+    uses: ortelius/workflow-toolkit/.github/workflows/helm-release-workflow.yml@037a22b92fc8a18174e3bddecbc529f49baec75a
+    needs: [setenv]
+    with:
+      gh_repository_owner: ${{ github.repository_owner }}
+      gh_event_name: ${{ github.event_name }}
+      gh_ref: ${{ github.ref }}
+      gh_handle: ${{ needs.setenv.outputs.gh_handle }}
+      chart: chart/ortelius
+    secrets:
+      GPG_KEYRING_BASE64: ${{ secrets.GPG_KEYRING_BASE64 }}
+      GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      GPG_KEY: ${{ secrets.GPG_KEY }}
+      gh_token: ${{ secrets.HELM_INDEXER_TOKEN }}
