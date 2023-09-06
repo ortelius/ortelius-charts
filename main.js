@@ -108,6 +108,7 @@ function createYamlOutput() {
         }
         var result = data.replace(/ORTELIUS_VERSION=\d+\.\d+\.\d+/g, 'ORTELIUS_VERSION=' + chartVersion);
       
+	console.log(result);
         fs.writeFile("./chart/ortelius/README.md", result, 'utf8', function (err) {
            if (err) return console.log(err);
         });
