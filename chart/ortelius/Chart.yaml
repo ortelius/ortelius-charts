@@ -9,7 +9,7 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.1090
+version: 10.0.1091
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
@@ -17,33 +17,33 @@ annotations:
     url: https://ortelius.io/ortelius.key
 dependencies:
 - name: ms-dep-pkg-cud
-  version: 10.0.247
+  version: 10.0.271
   repository: https://ortelius.github.io/ms-dep-pkg-cud/
 - name: ms-dep-pkg-r
-  version: 10.0.328
+  version: 10.0.350
   repository: https://ortelius.github.io/ms-dep-pkg-r/
 - name: ms-textfile-crud
-  version: 10.0.230
+  version: 10.0.254
   repository: https://ortelius.github.io/ms-textfile-crud/
 - name: ms-compitem-crud
-  version: 10.0.199
+  version: 10.0.221
   repository: https://ortelius.github.io/ms-compitem-crud/
 - name: ms-validate-user
-  version: 10.0.263
+  version: 10.0.283
   repository: https://ortelius.github.io/ms-validate-user/
 - name: ms-scorecard
-  version: 10.0.287
+  version: 10.0.308
   repository: https://ortelius.github.io/ms-scorecard/
 - name: ms-postgres
   version: 10.0.14
   condition: global.postgresql.enabled
   repository: https://ortelius.github.io/ms-postgres/
 - name: ms-general
-  version: 10.0.126
+  version: 10.0.129
   repository: https://ortelius.github.io/ortelius/
 - name: ms-nginx
-  version: 10.0.126
+  version: 10.0.129
   repository: https://ortelius.github.io/ortelius/
 - name: ms-ui
-  version: 10.0.126
+  version: 10.0.129
   repository: https://ortelius.github.io/ortelius/
