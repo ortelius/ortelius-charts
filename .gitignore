@@ -134,3 +134,13 @@ dmypy.json
 
 # MegaLinter
 megalinter-reports/
+
+#NodeJS
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
