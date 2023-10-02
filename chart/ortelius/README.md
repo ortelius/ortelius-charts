@@ -248,13 +248,13 @@ This chart deploys all of the required secrets, services, and deployments on a [
 
 ### Common parameters
 
-| Name                     | Description                                                                                  | Value           |
-| ------------------------ | -------------------------------------------------------------------------------------------- | --------------- |
-| `ms-general.dbuser`     | Postgres Database User Name                                                                  | `postgres`      |
-| `ms-general.dbpass`     | Postgres Database Password                                                                   | `postgres`      |
-| `ms-general.dbname`     | Postgres Database Name                                                                       | `postgres`      |
-| `ms-general.dbhost`     | Postgres Database Host Name                                                                  | `localhost`     |
-| `ms-general.dbport`     | Postgres Database Port                                                                       | `5432`          |
+| Name                | Description                 | Value       |
+|---------------------|-----------------------------|-------------|
+| `ms-general.dbuser` | Postgres Database User Name | `postgres`  |
+| `ms-general.dbpass` | Postgres Database Password  | `postgres`  |
+| `ms-general.dbname` | Postgres Database Name      | `postgres`  |
+| `ms-general.dbhost` | Postgres Database Host Name | `localhost` |
+| `ms-general.dbport` | Postgres Database Port      | `5432`      |
 | `ms-nginx.ingress.type` | default nginx ingress,  AWS Load Balancer or Google Load Balancer | `ssloff, alb, glb, k3s` | `ssloff`  |
 | `ms-nginx.ingress.nodePort` | set the nodePort to access the service | >= 30000 | default is random port number  |
 | `ms-nginx.ingress.alb_subnets`    | String of comma delimited subnets for the ALB - required when  `ms-nginx.ingress.type=alb`  |   |
@@ -282,13 +282,13 @@ helm install my-release -f values.yaml ortelius/ortelius
     kubectl port-forward -h
     ```
 
-* 8080 represents the local port on your machine http://localhost:8080
+* 8080 represents the local port on your machine `http://localhost:8080`
 
     ```console
     kubectl port-forward svc/ms-nginx 8080:80 -n ortelius
     ```
 
-* 8443 represents the local port on your machine http://localhost:8443
+* 8443 represents the local port on your machine `http://localhost:8443`
 
     ```console
     kubectl port-forward svc/ms-nginx 8443:443 -n ortelius
