@@ -9,7 +9,7 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.2989
+version: 10.0.2990
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
@@ -20,7 +20,7 @@ dependencies:
   version: 10.0.431
   repository: https://ortelius.github.io/ms-dep-pkg-cud/
 - name: ms-dep-pkg-r
-  version: 10.0.548
+  version: 10.0.550
   repository: https://ortelius.github.io/ms-dep-pkg-r/
 - name: ms-textfile-crud
   version: 10.0.455
