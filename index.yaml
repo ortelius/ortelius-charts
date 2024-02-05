@@ -7,7 +7,7 @@ entries:
         url: https://ortelius.io/ortelius.key
     apiVersion: v2
     appVersion: 10.0.0
-    created: "2024-02-05T03:27:43.300025493Z"
+    created: "2024-02-05T03:32:08.376400798Z"
     dependencies:
     - name: ms-dep-pkg-cud
       repository: https://ortelius.github.io/ms-dep-pkg-cud/
@@ -26,7 +26,7 @@ entries:
       version: 10.0.518
     - name: ms-scorecard
       repository: https://ortelius.github.io/ms-scorecard/
-      version: 10.0.484
+      version: 10.0.486
     - condition: global.postgresql.enabled
       name: ms-postgres
       repository: https://ortelius.github.io/ms-postgres/
@@ -41,7 +41,7 @@ entries:
       repository: https://ortelius.github.io/ortelius/
       version: 10.0.224
     description: Supply Chain Evidence Catalog
-    digest: 5247008954fad5162855fe5c251f2a8acbec517b7f724412f55bcec6e1fbf2cf
+    digest: a9f0860b57f0d0b81b387c85fde0ebe88da755fe535f3d679d0fdec7de64cb37
     home: https://www.ortelius.io
     icon: https://ortelius.github.io/ortelius-charts/logo.png
     keywords:
@@ -52,8 +52,8 @@ entries:
     name: ortelius
     type: application
     urls:
-    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.3199/ortelius-10.0.3199.tgz
-    version: 10.0.3199
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.3200/ortelius-10.0.3200.tgz
+    version: 10.0.3200
   - annotations:
       artifacthub.io/signKey: |
         fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
@@ -92221,4 +92221,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.394/ortelius-10.0.394.tgz
     version: 10.0.394
-generated: "2024-02-05T03:27:43.298286304Z"
+generated: "2024-02-05T03:32:08.374689792Z"
