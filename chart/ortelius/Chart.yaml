@@ -4,46 +4,46 @@ description: Supply Chain Evidence Catalog
 home: https://www.ortelius.io
 icon: https://ortelius.github.io/ortelius-charts/logo.png
 keywords:
-  - Service Catalog
-  - Microservices
-  - SBOM
-  - Supply Chain
+- Service Catalog
+- Microservices
+- SBOM
+- Supply Chain
 type: application
-version: 10.0.1321
+version: 10.0.3452
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
     fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
     url: https://ortelius.io/ortelius.key
 dependencies:
-  - name: ms-dep-pkg-cud
-    version: 10.0.313
-    repository: https://ortelius.github.io/ms-dep-pkg-cud/
-  - name: ms-dep-pkg-r
-    version: 10.0.377
-    repository: https://ortelius.github.io/ms-dep-pkg-r/
-  - name: ms-textfile-crud
-    version: 10.0.282
-    repository: https://ortelius.github.io/ms-textfile-crud/
-  - name: ms-compitem-crud
-    version: 10.0.250
-    repository: https://ortelius.github.io/ms-compitem-crud/
-  - name: ms-validate-user
-    version: 10.0.314
-    repository: https://ortelius.github.io/ms-validate-user/
-  - name: ms-scorecard
-    version: 10.0.332
-    repository: https://ortelius.github.io/ms-scorecard/
-  - name: ms-postgres
-    version: 10.0.14
-    condition: global.postgresql.enabled
-    repository: https://ortelius.github.io/ms-postgres/
-  - name: ms-general
-    version: 10.0.138
-    repository: https://ortelius.github.io/ortelius/
-  - name: ms-nginx
-    version: 10.0.138
-    repository: https://ortelius.github.io/ortelius/
-  - name: ms-ui
-    version: 10.0.138
-    repository: https://ortelius.github.io/ortelius/
+- name: ms-dep-pkg-cud
+  version: 10.0.538
+  repository: https://ortelius.github.io/ms-dep-pkg-cud/
+- name: ms-dep-pkg-r
+  version: 10.0.608
+  repository: https://ortelius.github.io/ms-dep-pkg-r/
+- name: ms-textfile-crud
+  version: 10.0.510
+  repository: https://ortelius.github.io/ms-textfile-crud/
+- name: ms-compitem-crud
+  version: 10.0.475
+  repository: https://ortelius.github.io/ms-compitem-crud/
+- name: ms-validate-user
+  version: 10.0.553
+  repository: https://ortelius.github.io/ms-validate-user/
+- name: ms-scorecard
+  version: 10.0.499
+  repository: https://ortelius.github.io/ms-scorecard/
+- name: ms-postgres
+  version: 10.0.14
+  condition: global.postgresql.enabled
+  repository: https://ortelius.github.io/ms-postgres/
+- name: ms-general
+  version: 10.0.238
+  repository: https://ortelius.github.io/ortelius/
+- name: ms-nginx
+  version: 10.0.238
+  repository: https://ortelius.github.io/ortelius/
+- name: ms-ui
+  version: 10.0.238
+  repository: https://ortelius.github.io/ortelius/
