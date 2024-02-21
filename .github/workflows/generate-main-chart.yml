@@ -31,6 +31,7 @@ jobs:
     uses: ortelius/workflow-toolkit/.github/workflows/helm-release-workflow.yml@d1e4af10b2ae29e61566b28f04d55abd49073769
     needs: [setenv]
     with:
+      dhurl: ${{ needs.setenv.outputs.dhurl }}
       gh_repository_owner: ${{ github.repository_owner }}
       gh_event_name: ${{ github.event_name }}
       gh_ref: ${{ github.ref }}
@@ -41,3 +42,5 @@ jobs:
       GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       GPG_KEY: ${{ secrets.GPG_KEY }}
       gh_token: ${{ secrets.HELM_INDEXER_TOKEN }}
+      DHPASS: ${{ secrets.DHPASS }}
+      DHUSER: ${{ secrets.DHUSER }}      
