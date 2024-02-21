@@ -7,7 +7,7 @@ entries:
         url: https://ortelius.io/ortelius.key
     apiVersion: v2
     appVersion: 10.0.0
-    created: "2024-02-21T06:41:19.856459029Z"
+    created: "2024-02-21T06:45:08.968410469Z"
     dependencies:
     - name: ms-dep-pkg-cud
       repository: https://ortelius.github.io/ms-dep-pkg-cud/
@@ -41,7 +41,7 @@ entries:
       repository: https://ortelius.github.io/ortelius/
       version: 10.0.242
     description: Supply Chain Evidence Catalog
-    digest: 7cbfa7b0f48abc7f8098f14be500b288fe98218524424f47b95eab8c1bcc4ff9
+    digest: e1ee2ccb3813244f8fa4e4042647b1072962c90be47b17cd0fd154d6eb485177
     home: https://www.ortelius.io
     icon: https://ortelius.github.io/ortelius-charts/logo.png
     keywords:
@@ -52,8 +52,61 @@ entries:
     name: ortelius
     type: application
     urls:
-    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.3530/ortelius-10.0.3530.tgz
-    version: 10.0.3530
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.3531/ortelius-10.0.3531.tgz
+    version: 10.0.3531
+  - annotations:
+      artifacthub.io/signKey: |
+        fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
+        url: https://ortelius.io/ortelius.key
+    apiVersion: v2
+    appVersion: 10.0.0
+    created: "2024-02-21T06:39:30.419273998Z"
+    dependencies:
+    - name: ms-dep-pkg-cud
+      repository: https://ortelius.github.io/ms-dep-pkg-cud/
+      version: 10.0.548
+    - name: ms-dep-pkg-r
+      repository: https://ortelius.github.io/ms-dep-pkg-r/
+      version: 10.0.617
+    - name: ms-textfile-crud
+      repository: https://ortelius.github.io/ms-textfile-crud/
+      version: 10.0.520
+    - name: ms-compitem-crud
+      repository: https://ortelius.github.io/ms-compitem-crud/
+      version: 10.0.480
+    - name: ms-validate-user
+      repository: https://ortelius.github.io/ms-validate-user/
+      version: 10.0.561
+    - name: ms-scorecard
+      repository: https://ortelius.github.io/ms-scorecard/
+      version: 10.0.506
+    - condition: global.postgresql.enabled
+      name: ms-postgres
+      repository: https://ortelius.github.io/ms-postgres/
+      version: 10.0.14
+    - name: ms-general
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.242
+    - name: ms-nginx
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.242
+    - name: ms-ui
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.242
+    description: Supply Chain Evidence Catalog
+    digest: e2bfa3cc3beb884c4734c5f646cfb5f8b92b096400e85f7a22268b8ecd1f9772
+    home: https://www.ortelius.io
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    keywords:
+    - Service Catalog
+    - Microservices
+    - SBOM
+    - Supply Chain
+    name: ortelius
+    type: application
+    urls:
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.3529/ortelius-10.0.3529.tgz
+    version: 10.0.3529
   - annotations:
       artifacthub.io/signKey: |
         fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
@@ -103139,4 +103192,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.394/ortelius-10.0.394.tgz
     version: 10.0.394
-generated: "2024-02-21T06:41:19.854842312Z"
+generated: "2024-02-21T06:45:08.966030137Z"
