@@ -9,7 +9,7 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.3628
+version: 10.0.3629
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
@@ -32,7 +32,7 @@ dependencies:
   version: 10.0.564
   repository: https://ortelius.github.io/ms-validate-user/
 - name: ms-scorecard
-  version: 10.0.526
+  version: 10.0.528
   repository: https://ortelius.github.io/ms-scorecard/
 - name: ms-postgres
   version: 10.0.19
