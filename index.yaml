@@ -7,6 +7,59 @@ entries:
         url: https://ortelius.io/ortelius.key
     apiVersion: v2
     appVersion: 10.0.0
+    created: "2024-03-18T19:51:08.404435859Z"
+    dependencies:
+    - name: ms-dep-pkg-cud
+      repository: https://ortelius.github.io/ms-dep-pkg-cud/
+      version: 10.0.614
+    - name: ms-dep-pkg-r
+      repository: https://ortelius.github.io/ms-dep-pkg-r/
+      version: 10.0.672
+    - name: ms-textfile-crud
+      repository: https://ortelius.github.io/ms-textfile-crud/
+      version: 10.0.568
+    - name: ms-compitem-crud
+      repository: https://ortelius.github.io/ms-compitem-crud/
+      version: 10.0.536
+    - name: ms-validate-user
+      repository: https://ortelius.github.io/ms-validate-user/
+      version: 10.0.600
+    - name: ms-scorecard
+      repository: https://ortelius.github.io/ms-scorecard/
+      version: 10.0.546
+    - condition: global.postgresql.enabled
+      name: ms-postgres
+      repository: https://ortelius.github.io/ms-postgres/
+      version: 10.0.31
+    - name: ms-general
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.272
+    - name: ms-nginx
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.272
+    - name: ms-ui
+      repository: https://ortelius.github.io/ortelius/
+      version: 10.0.272
+    description: Supply Chain Evidence Catalog
+    digest: b8794d303d7b9cc74b84871c2c21a686fc45f3e7dfbc5d8dfa1a825649d94d43
+    home: https://www.ortelius.io
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    keywords:
+    - Service Catalog
+    - Microservices
+    - SBOM
+    - Supply Chain
+    name: ortelius
+    type: application
+    urls:
+    - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.3719/ortelius-10.0.3719.tgz
+    version: 10.0.3719
+  - annotations:
+      artifacthub.io/signKey: |
+        fingerprint: 115D42896E81EA5F774C5CDC7F398DEBAA126EB9
+        url: https://ortelius.io/ortelius.key
+    apiVersion: v2
+    appVersion: 10.0.0
     created: "2024-03-18T19:19:51.495174572Z"
     dependencies:
     - name: ms-dep-pkg-cud
@@ -111195,4 +111248,4 @@ entries:
     urls:
     - https://github.com/ortelius/ortelius-charts/releases/download/ortelius-10.0.394/ortelius-10.0.394.tgz
     version: 10.0.394
-generated: "2024-03-18T19:19:51.493543066Z"
+generated: "2024-03-18T19:51:08.402784269Z"
