@@ -9,7 +9,7 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.3782
+version: 10.0.3783
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
@@ -20,7 +20,7 @@ dependencies:
   version: 10.0.632
   repository: https://ortelius.github.io/ms-dep-pkg-cud/
 - name: ms-dep-pkg-r
-  version: 10.0.688
+  version: 10.0.690
   repository: https://ortelius.github.io/ms-dep-pkg-r/
 - name: ms-textfile-crud
   version: 10.0.585
@@ -32,18 +32,18 @@ dependencies:
   version: 10.0.614
   repository: https://ortelius.github.io/ms-validate-user/
 - name: ms-scorecard
-  version: 10.0.558
+  version: 10.0.560
   repository: https://ortelius.github.io/ms-scorecard/
 - name: ms-postgres
   version: 10.0.40
   condition: global.postgresql.enabled
   repository: https://ortelius.github.io/ms-postgres/
 - name: ms-general
-  version: 10.0.281
+  version: 10.0.282
   repository: https://ortelius.github.io/ortelius/
 - name: ms-nginx
-  version: 10.0.281
+  version: 10.0.282
   repository: https://ortelius.github.io/ortelius/
 - name: ms-ui
-  version: 10.0.281
+  version: 10.0.282
   repository: https://ortelius.github.io/ortelius/
