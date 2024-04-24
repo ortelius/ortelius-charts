@@ -9,7 +9,7 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.3966
+version: 10.0.3967
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
@@ -39,11 +39,11 @@ dependencies:
   condition: global.postgresql.enabled
   repository: https://ortelius.github.io/ms-postgres/
 - name: ms-general
-  version: 10.0.307
+  version: 10.0.308
   repository: https://ortelius.github.io/ortelius/
 - name: ms-nginx
-  version: 10.0.307
+  version: 10.0.308
   repository: https://ortelius.github.io/ortelius/
 - name: ms-ui
-  version: 10.0.307
+  version: 10.0.308
   repository: https://ortelius.github.io/ortelius/
