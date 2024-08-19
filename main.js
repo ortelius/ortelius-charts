@@ -196,12 +196,12 @@ getChartEntries().then(() => {
       for (const i in deploymentImages)
       {
         img = deploymentImages[i].replace("quay.io/ortelius/", "").replaceAll(':', ';').replaceAll('.', '_').replace(/-v(?=\d)/g, ';').replace(/(\d+)-g/g, '$1_g');
-        imageTags.push('GLOBAL.Open Source.Linux Foundation.OpenSSF.Ortelius.' + img);
+        imageTags.push('GLOBAL.Open Source.Linux Foundation.CDF.Ortelius.' + img);
       }
     });
   }
 
-  const domain = 'GLOBAL.Open Source.Linux Foundation.OpenSSF.Ortelius';
+  const domain = 'GLOBAL.Open Source.Linux Foundation.CDF.Ortelius';
   const environment = 'ArtifactHub';
   const application = 'ortelius';
 
