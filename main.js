@@ -12,6 +12,7 @@ const chartRepos = [
   'ortelius/ms-textfile-crud',
   'ortelius/ms-compitem-crud',
   'ortelius/ms-validate-user',
+  'ortelius/ms-sbom-export',
   'ortelius/ms-scorecard',
   'ortelius/ms-postgres',
   'ortelius/ortelius'
