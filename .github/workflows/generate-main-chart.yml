@@ -16,7 +16,7 @@ permissions: # added using https://github.com/step-security/secure-repo
 
 jobs:
   setenv:
-    uses: ortelius/workflow-toolkit/.github/workflows/env-config-workflow.yml@428924f21c3eb7f6e1c4a28cae8a1174ab677a47
+    uses: ortelius/workflow-toolkit/.github/workflows/env-config-workflow.yml@a3fd1b1f441f5137626fb141983ace7e9819a4b2
     with:
       gh_head_ref: ${{ github.head_ref }}
       gh_ref_name: ${{ github.ref_name }}
@@ -28,7 +28,7 @@ jobs:
   helm:
     permissions:
       contents: write
-    uses: ortelius/workflow-toolkit/.github/workflows/helm-release-workflow.yml@428924f21c3eb7f6e1c4a28cae8a1174ab677a47
+    uses: ortelius/workflow-toolkit/.github/workflows/helm-release-workflow.yml@a3fd1b1f441f5137626fb141983ace7e9819a4b2
     needs: [setenv]
     with:
       dhurl: ${{ needs.setenv.outputs.dhurl }}
