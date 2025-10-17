@@ -9,7 +9,7 @@ keywords:
 - SBOM
 - Supply Chain
 type: application
-version: 10.0.5675
+version: 10.0.5676
 appVersion: 10.0.0
 annotations:
   artifacthub.io/signKey: |
@@ -35,7 +35,7 @@ dependencies:
   version: 10.0.842
   repository: https://ortelius.github.io/ms-sbom-export/
 - name: ms-scorecard
-  version: 10.0.1162
+  version: 10.0.1164
   repository: https://ortelius.github.io/ms-scorecard/
 - name: ms-postgres
   version: 10.0.387
