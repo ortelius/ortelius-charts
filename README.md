@@ -118,3 +118,10 @@ const chartRepos = [
 - Reference implementation: [https://github.com/helm/chart-releaser-action](https://github.com/helm/chart-releaser-action)
 
 
+### Community
+
+- Website: [https://ortelius.io](https://ortelius.io)
+- GitHub: [https://github.com/ortelius](https://github.com/ortelius)
+- Discord: [https://discord.gg/ortelius](https://discord.gg/ortelius)
+
+Maintained by the Ortelius open-source community.
